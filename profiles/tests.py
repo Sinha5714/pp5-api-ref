@@ -50,3 +50,10 @@ class ProfileDetailViewTests(APITestCase):
         profile = Profile.objects.filter(pk=1).first()
         self.assertEqual(profile.email, 'Test@gmail.com')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_user_cannot_update_others_profile(self):
+        self.client.login(username='user1', password='pass1')
+        response = self.client.put(
+            '/profiles/2/', {'email': 'Test@gmail.com'}
+        )
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
