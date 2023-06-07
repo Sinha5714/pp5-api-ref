@@ -23,3 +23,11 @@ class CommentSerializer(serializers.ModelSerializer):
             'id', 'user', 'created_on', 'updated_on', 'event',
             'content', 'is_owner', 'profile_id', 'profile_image',
         ]
+
+
+class CommentDetailSerializer(CommentSerializer):
+    """
+    Serializer for Comment Detail View
+
+    """
+    event = serializers.ReadOnlyField(source='event.id')

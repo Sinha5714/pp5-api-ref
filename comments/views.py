@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from pp5_api.permissions import IsUserOrReadOnly
 from .models import Comment
-from .serializers import CommentSerializer
+from .serializers import CommentSerializer, CommentDetailSerializer
 
 
 class CommentListView(generics.ListCreateAPIView):
@@ -14,3 +14,12 @@ class CommentListView(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+
+class CommentDetailView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Retrieve a comment, or update or delete it by id if you own it.
+    """
+    permission_classes = [IsUserOrReadOnly]
+    serializer_class = CommentDetailSerializer
+    queryset = Comment.objects.all()
