@@ -36,7 +36,7 @@ class Event(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
-    country = models.TextField(blank=True)
+    country = models.CharField(max_length=50)
     image = models.ImageField(
         upload_to='images/', default='../equal-rights_o1owqr', blank=True
     )
