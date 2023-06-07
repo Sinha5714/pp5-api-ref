@@ -22,3 +22,18 @@ class ProfileListViewTests(APITestCase):
     def test_can_list_profiles(self):
         response = self.client.get('/profiles/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+
+class ProfileDetailViewTests(APITestCase):
+    """
+    Tests for the Profile model detail view
+    """
+
+    def setUp(self):
+        user1 = User.objects.create_user(username='user1', password='pass1')
+        user2 = User.objects.create_user(username='user2', password='pass2')
+        user3 = User.objects.create_user(username='user3', password='pass3')
+
+    def test_can_retrieve_profile_using_valid_id(self):
+        response = self.client.get('/profiles/2/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
