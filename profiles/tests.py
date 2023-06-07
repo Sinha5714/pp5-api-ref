@@ -57,3 +57,13 @@ class ProfileDetailViewTests(APITestCase):
             '/profiles/2/', {'email': 'Test@gmail.com'}
         )
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+
+    def test_user_can_delete_their_own_profile(self):
+        self.client.login(username='user1', password='pass1')
+        response = self.client.delete('/profiles/1/')
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+    def test_user_cannot_delete_others_profile(self):
+        self.client.login(username='user1', password='pass1')
+        response = self.client.delete('/profiles/3/')
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
