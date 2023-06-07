@@ -15,3 +15,4 @@ class ProfileSerializer(serializers.ModelSerializer):
             'about_me', 'instagram_link', 'facebook_link',
             'phone_number', 'email', 'profile_pic',
         ]
+
