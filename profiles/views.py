@@ -1,8 +1,9 @@
-from django.db.models import Count
 from rest_framework import generics, filters
-from .models import Profile
 from .serializers import ProfileSerializer
+from django.db.models import Count
+from django_filters.rest_framework import DjangoFilterBackend
 from pp5_api.permissions import IsUserOrReadOnly
+from .models import Profile
 
 
 class ProfileList(generics.ListAPIView):
@@ -12,7 +13,19 @@ class ProfileList(generics.ListAPIView):
     """
     serializer_class = ProfileSerializer
     queryset = Profile.objects.annotate(
+        events_count=Count('user__event', distinct=True),
     ).order_by('-created_on')
+
+    filter_backends = [
+        filters.OrderingFilter,
+        DjangoFilterBackend,
+    ]
+    filterset_fields = [
+        'user__profile'
+    ]
+    ordering_fields = [
+        'events_count',
+    ]
 
 
 class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
