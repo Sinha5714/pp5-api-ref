@@ -41,3 +41,12 @@ class ProfileDetailViewTests(APITestCase):
     def test_cannot_retrieve_profile_using_invalid_id(self):
         response = self.client.get('/profiles/4/')
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+    def test_user_can_update_own_profile_if_logged_in(self):
+        self.client.login(username='user1', password='pass1')
+        response = self.client.put(
+            '/profiles/1/', {'email': 'Test@gmail.com'}
+        )
+        profile = Profile.objects.filter(pk=1).first()
+        self.assertEqual(profile.email, 'Test@gmail.com')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
