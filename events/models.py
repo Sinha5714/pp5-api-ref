@@ -12,7 +12,7 @@ EVENT_CATEGORIES = (
 
 EVENT_SUB_CATEGORIES = (
     ("Seminars", "Seminars"),
-    ("Webinars", "Webinars"),
+    ("Meet-ups", "Meet-ups"),
     ("Retreats", "Retreats"),
 )
 
