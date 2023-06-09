@@ -36,6 +36,7 @@ class EventSerializer(serializers.ModelSerializer):
         model = Event
         fields = [
             'id', 'user', 'is_owner', 'created_on', 'updated_on', 'title',
-            'category', 'sub_category', 'event_start_date', 'event_end_date', 'content', 'country',
+            'category', 'sub_category', 'event_start_date', 'event_end_date',
+            'content', 'country',
             'image', 'image_filter', 'profile_id', 'profile_image'
         ]

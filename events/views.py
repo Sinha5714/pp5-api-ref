@@ -6,10 +6,9 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .models import Event
 
 
-class EventList(generics.ListAPIView):
+class EventList(generics.ListCreateAPIView):
     """
-    List all profiles.
-    No create view as profile creation is handled by django signals.
+    List and create Event by logged in user
     """
     serializer_class = EventSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -43,9 +42,10 @@ class EventList(generics.ListAPIView):
 
 class EventDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve an event, update or delete it by id 
+    Retrieve an event, update or delete it by id
     """
     serializer_class = EventSerializer
     permission_classes = [IsUserOrReadOnly]
     queryset = Event.objects.annotate(
+        comments_count=Count('comment', distinct=True),
     ).order_by('-created_on')
