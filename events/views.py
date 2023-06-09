@@ -13,7 +13,6 @@ class EventList(generics.ListCreateAPIView):
     serializer_class = EventSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Event.objects.annotate(
-        comments_count=Count('comment', distinct=True),
     ).order_by('-created_on')
 
     filter_backends = [
@@ -32,7 +31,6 @@ class EventList(generics.ListCreateAPIView):
         'category',
     ]
     ordering_fields = [
-        'comments_count',
         'event_start_date',
     ]
 
@@ -47,5 +45,4 @@ class EventDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = EventSerializer
     permission_classes = [IsUserOrReadOnly]
     queryset = Event.objects.annotate(
-        comments_count=Count('comment', distinct=True),
     ).order_by('-created_on')
