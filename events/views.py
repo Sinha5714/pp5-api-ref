@@ -29,12 +29,12 @@ class EventList(generics.ListAPIView):
     search_fields = [
         'user__username',
         'title',
-        'event_date',
+        'event_start_date',
         'category',
     ]
     ordering_fields = [
         'comments_count',
-        'event_date',
+        'event_start_date',
     ]
 
     def perform_create(self, serializer):
@@ -43,7 +43,7 @@ class EventList(generics.ListAPIView):
 
 class EventDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve an event, or update or delete it by id if you own it.
+    Retrieve an event, update or delete it by id 
     """
     serializer_class = EventSerializer
     permission_classes = [IsUserOrReadOnly]

@@ -43,7 +43,8 @@ class Event(models.Model):
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='Normal'
     )
-    event_date = models.DateField(blank=True)
+    event_start_date = models.DateField(blank=True, null=True)
+    event_end_date = models.DateField(blank=True, null=True)
     category = models.CharField(
         max_length=50, choices=EVENT_CATEGORIES, default='Equal-Rights'
     )
