@@ -14,3 +14,12 @@ class InterestedListView(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+
+class InterestedDetailView(generics.RetrieveDestroyAPIView):
+    """
+    Retrieve an interest or delete it by id if user owns it
+    """
+    serializer_class = InterestedSerializer
+    permission_classes = [IsUserOrReadOnly]
+    queryset = Interested.objects.all()

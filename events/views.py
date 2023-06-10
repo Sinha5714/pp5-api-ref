@@ -42,7 +42,7 @@ class EventList(generics.ListCreateAPIView):
 
 class EventDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve an event, update or delete it by id
+    Retrieve an event, update or delete it by id if user owns it
     """
     serializer_class = EventSerializer
     permission_classes = [IsUserOrReadOnly]
