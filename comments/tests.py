@@ -12,7 +12,11 @@ class CommentsListViewTests(APITestCase):
 
     def setUp(self):
         user1 = User.objects.create_user(username='user1', password='pass1')
-        event1 = Event.objects.create(user=user1, title='Test Event')
+        event1 = Event.objects.create(
+            user=user1,
+            title='Test Event',
+            country='Germany'
+            )
 
     def test_can_list_comments(self):
         user1 = User.objects.get(username='user1')
