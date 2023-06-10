@@ -1,20 +1,24 @@
-from django.db import models
-from django.contrib.auth.models import User
-from events.models import Event
+from rest_framework import serializers
+from .models import Interested
+from django.db import IntegrityError
 
 
-class Interested(models.Model):
+class InterestedSerializer(serializers.ModelSerializer):
     """
-    Class model for Interested, related to user and events
+    Serializer for the Interested model
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    event = models.ForeignKey(
-        Event, related_name='interested', on_delete=models.CASCADE
-    )
-    created_on = models.DateTimeField(auto_now_add=True)
+    user = serializers.ReadOnlyField(source='user.username')
 
     class Meta:
-        ordering = ['-created_on']
+        model = Interested
+        fields = [
+            'id', 'user', 'created_on', 'event',
+        ]
 
-    def __str__(self):
-        return f'{self.user} {self.event}'
+    def create(self, validated_data):
+        try:
+            return super().create(validated_data)
+        except IntegrityError:
+            raise serializers.ValidationError({
+                'detail': 'You have already shown interest!'
+            })
