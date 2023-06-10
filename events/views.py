@@ -14,6 +14,7 @@ class EventList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Event.objects.annotate(
         comments_count=Count('comment', distinct=True),
+        interested_count=Count('interested', distinct=True),
     ).order_by('-created_on')
 
     filter_backends = [
@@ -33,6 +34,7 @@ class EventList(generics.ListCreateAPIView):
     ]
     ordering_fields = [
         'comments_count',
+        'interested_count',
         'event_start_date',
     ]
 
@@ -48,4 +50,5 @@ class EventDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsUserOrReadOnly]
     queryset = Event.objects.annotate(
         comments_count=Count('comment', distinct=True),
+        interested_count=Count('interested', distinct=True),
     ).order_by('-created_on')
