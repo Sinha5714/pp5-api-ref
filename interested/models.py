@@ -15,6 +15,7 @@ class Interested(models.Model):
 
     class Meta:
         ordering = ['-created_on']
+        unique_together = ['user', 'event']
 
     def __str__(self):
         return f'{self.user} {self.event}'
