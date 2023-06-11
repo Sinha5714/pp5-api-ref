@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django_countries.fields import CountryField
 
 EVENT_CATEGORIES = (
     ("Discrimination", "Descrimination"),
@@ -36,7 +37,7 @@ class Event(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
-    country = models.CharField(max_length=50)
+    country = CountryField(null=True, blank=True, blank_label='Select country')
     image = models.ImageField(
         upload_to='images/', default='../equal-rights_o1owqr', blank=True
     )
