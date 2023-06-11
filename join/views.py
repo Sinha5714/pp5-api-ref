@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from pp5_api.permissions import IsUserOrReadOnly
 from .models import Join
-from .serializers import JoinListSerializer
+from .serializers import JoinSerializer
 from django_filters.rest_framework import DjangoFilterBackend
 
 
@@ -9,7 +9,7 @@ class JoinListView(generics.ListCreateAPIView):
     """
     List join or create a join reason if logged in.
     """
-    serializer_class = JoinListSerializer
+    serializer_class = JoinSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Join.objects.all()
     filter_backends = [DjangoFilterBackend]
@@ -17,3 +17,12 @@ class JoinListView(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+
+class JoinDetailView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Retrieve a join request, or update or delete it by id.
+    """
+    permission_classes = [IsUserOrReadOnly]
+    serializer_class = JoinSerializer
+    queryset = Join.objects.all()

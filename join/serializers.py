@@ -3,7 +3,7 @@ from django.db import IntegrityError
 from .models import Join
 
 
-class JoinListSerializer(serializers.ModelSerializer):
+class JoinSerializer(serializers.ModelSerializer):
     """
     Serializer for the Join model
     """
@@ -27,3 +27,5 @@ class JoinListSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({
                 'detail': 'You have already sent joining request!'
             })
+
+
