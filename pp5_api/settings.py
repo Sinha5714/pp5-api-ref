@@ -54,7 +54,13 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework.authtoken',
     'dj_rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django_countries',
+    'dj_rest_auth.registration',
+
     'profiles',
     'events',
     'comments',
@@ -62,6 +68,8 @@ INSTALLED_APPS = [
     'followers',
     'join',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
