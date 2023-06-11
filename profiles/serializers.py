@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django_countries.serializer_fields import CountryField
 from .models import Profile
 from followers.models import Follower
 
@@ -8,6 +9,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     Serializer for the Profile model
     """
     user = serializers.ReadOnlyField(source='user.username')
+    country = CountryField()
     is_owner = serializers.SerializerMethodField()
     following_id = serializers.SerializerMethodField()
     events_count = serializers.ReadOnlyField()
@@ -31,7 +33,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         model = Profile
         fields = [
             'id', 'user', 'is_owner', 'created_on', 'updated_on', 'name',
-            'about_me', 'instagram_link', 'facebook_link',
+            'country', 'about_me', 'instagram_link', 'facebook_link',
             'phone_number', 'email', 'profile_pic', 'following_id',
             'events_count', 'followers_count', 'following_count',
         ]
