@@ -13,8 +13,8 @@ class JoinSerializer(serializers.ModelSerializer):
     class Meta:
         model = Join
         fields = [
-            'id', 'user', 'reason', 'created_on',
-            'event_title',
+            'id', 'user','name', 'email', 'reason', 'created_on',
+            'event_title', 
         ]
 
     def create(self, validated_data):

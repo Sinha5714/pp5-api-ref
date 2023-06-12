@@ -9,6 +9,8 @@ class Join(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255, blank=True)
+    email = models.EmailField(max_length=255, default="")
     created_on = models.DateTimeField(auto_now_add=True)
     reason = models.TextField(max_length=255)
 
