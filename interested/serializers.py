@@ -1,6 +1,12 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from rest_framework import serializers
-from .models import Interested
 from django.db import IntegrityError
+
+# Internal:
+from .models import Interested
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class InterestedSerializer(serializers.ModelSerializer):

@@ -1,7 +1,13 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from rest_framework import serializers
 from django_countries.serializer_fields import CountryField
+
+# Internal:
 from .models import Profile
 from followers.models import Follower
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class ProfileSerializer(serializers.ModelSerializer):

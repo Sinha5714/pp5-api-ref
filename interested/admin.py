@@ -1,4 +1,16 @@
+"""
+A module for admin in the interested app
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.contrib import admin
-from .models import Interested
 
+# Internal:
+from .models import Interested
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+"""
+Register admin for the interested app
+"""
 admin.site.register(Interested)

@@ -1,7 +1,13 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.contrib.auth.models import User
-from .models import Follower
 from rest_framework import status
 from rest_framework.test import APITestCase
+
+# Internal:
+from .models import Follower
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class FollowerListViewTests(APITestCase):

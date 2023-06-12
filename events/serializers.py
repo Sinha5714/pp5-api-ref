@@ -1,11 +1,17 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from rest_framework import serializers
 from django_countries.serializer_fields import CountryField
+
+# Internal:
 from .models import Event
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class EventSerializer(serializers.ModelSerializer):
     """
-    Serializer for the Profile model
+    Serializer for the Events model
     """
     user = serializers.ReadOnlyField(source='user.username')
     country = CountryField()

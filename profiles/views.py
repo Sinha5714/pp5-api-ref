@@ -1,9 +1,15 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from rest_framework import generics, filters
-from .serializers import ProfileSerializer
 from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
+
+# Internal:
 from pp5_api.permissions import IsUserOrReadOnly
 from .models import Profile
+from .serializers import ProfileSerializer
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class ProfileList(generics.ListAPIView):

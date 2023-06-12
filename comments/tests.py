@@ -1,8 +1,14 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.contrib.auth.models import User
-from events.models import Event
-from .models import Comment
 from rest_framework import status
 from rest_framework.test import APITestCase
+
+# Internal:
+from events.models import Event
+from .models import Comment
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class CommentsListViewTests(APITestCase):
@@ -16,7 +22,7 @@ class CommentsListViewTests(APITestCase):
             user=user1,
             title='Test Event',
             country='Germany'
-            )
+        )
 
     def test_can_list_comments(self):
         user1 = User.objects.get(username='user1')

@@ -1,8 +1,14 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.contrib.auth.models import User
-from events.models import Event
-from .models import Interested
 from rest_framework import status
 from rest_framework.test import APITestCase
+
+# Internal:
+from events.models import Event
+from .models import Interested
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class InterestedListViewTests(APITestCase):

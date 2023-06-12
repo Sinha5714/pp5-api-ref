@@ -1,9 +1,15 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from rest_framework import generics, permissions, filters
-from .serializers import EventSerializer
-from pp5_api.permissions import IsUserOrReadOnly
 from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
+
+# Internal:
+from .serializers import EventSerializer
+from pp5_api.permissions import IsUserOrReadOnly
 from .models import Event
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class EventList(generics.ListCreateAPIView):

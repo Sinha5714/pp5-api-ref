@@ -1,5 +1,16 @@
+"""
+A module for admin in the events app
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.contrib import admin
-from .models import Event
 
-# Register your models here.
+# Internal:
+from .models import Event
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+"""
+Register admin for the events app
+"""
 admin.site.register(Event)

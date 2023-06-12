@@ -1,5 +1,14 @@
+"""
+A module for urls in the intererested app
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.urls import path
+
+# Internal:
 from interested import views
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 urlpatterns = [
     path('interested/', views.InterestedListView.as_view()),

@@ -1,4 +1,16 @@
+"""
+A module for admin in the followers app
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.contrib import admin
-from .models import Follower
 
+# Internal:
+from .models import Follower
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+"""
+Register admin for the followers app
+"""
 admin.site.register(Follower)

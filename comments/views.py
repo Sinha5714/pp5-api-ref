@@ -1,7 +1,13 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from rest_framework import generics, permissions
 from pp5_api.permissions import IsUserOrReadOnly
+
+# Internal:
 from .models import Comment
 from .serializers import CommentSerializer, CommentDetailSerializer
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class CommentListView(generics.ListCreateAPIView):

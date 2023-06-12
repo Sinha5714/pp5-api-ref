@@ -1,8 +1,14 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from rest_framework import generics, permissions
+from django_filters.rest_framework import DjangoFilterBackend
+
+# Internal:
 from pp5_api.permissions import IsUserOrReadOnly
 from .models import Join
 from .serializers import JoinSerializer
-from django_filters.rest_framework import DjangoFilterBackend
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class JoinListView(generics.ListCreateAPIView):

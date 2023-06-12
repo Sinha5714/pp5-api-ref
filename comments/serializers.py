@@ -1,6 +1,12 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from rest_framework import serializers
+
+# Internal:
 from .models import Comment
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class CommentSerializer(serializers.ModelSerializer):

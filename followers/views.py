@@ -1,7 +1,13 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from rest_framework import generics, permissions
+
+# Internal:
 from pp5_api.permissions import IsUserOrReadOnly
 from .models import Follower
 from .serializers import FollowerSerializer
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class FollowerListView(generics.ListCreateAPIView):
