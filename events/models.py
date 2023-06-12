@@ -6,9 +6,9 @@ EVENT_CATEGORIES = (
     ("Discrimination", "Descrimination"),
     ("LQBTQ", "LGBTQ"),
     ("Equal-Rights", "Equal Rights"),
-    ("Marraige", "Marraige"),
-    ("Work", "Work"),
-    ("Education", "Education"),
+    ("Marraige-Rights", "Marraige Rights"),
+    ("Work-Rights", "Work Rights"),
+    ("Education-Rights", "Education Rights"),
 )
 
 EVENT_SUB_CATEGORIES = (

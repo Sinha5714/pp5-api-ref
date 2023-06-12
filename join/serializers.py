@@ -13,7 +13,7 @@ class JoinSerializer(serializers.ModelSerializer):
     class Meta:
         model = Join
         fields = [
-            'id', 'user','name', 'email', 'reason', 'created_on',
+            'id', 'user', 'name', 'email', 'reason', 'created_on',
             'event_title',
         ]
 
