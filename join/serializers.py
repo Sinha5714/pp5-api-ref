@@ -13,13 +13,13 @@ class JoinSerializer(serializers.ModelSerializer):
     class Meta:
         model = Join
         fields = [
-            'id', 'user', 'name', 'email', 'reason', 'created_on',
+            'id', 'user','name', 'email', 'reason', 'created_on',
             'event_title',
         ]
 
     def create(self, validated_data):
         """
-        Validation to stop a user sending join request to the same event twice
+        Validation to stop a user posting join request to the same event twice
         """
         try:
             return super().create(validated_data)
