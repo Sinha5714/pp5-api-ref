@@ -50,9 +50,9 @@ class InterestedListViewTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
 
-class CommentDetailViewTests(APITestCase):
+class InterestedDetailViewTests(APITestCase):
     """
-    Test for Comment detail view
+    Test for Interested detail view
     """
 
     def setUp(self):
