@@ -21,6 +21,7 @@ class EventList(generics.ListCreateAPIView):
     queryset = Event.objects.annotate(
         comments_count=Count('comment', distinct=True),
         interested_count=Count('interested', distinct=True),
+        join_request=Count('join', distinct=True),
     ).order_by('-created_on')
 
     filter_backends = [
@@ -41,6 +42,7 @@ class EventList(generics.ListCreateAPIView):
     ordering_fields = [
         'comments_count',
         'interested_count',
+        'join_request',
         'event_start_date',
     ]
 

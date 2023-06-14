@@ -22,6 +22,7 @@ class EventSerializer(serializers.ModelSerializer):
     )
     comments_count = serializers.ReadOnlyField()
     interested_count = serializers.ReadOnlyField()
+    join_request = serializers.ReadOnlyField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -48,5 +49,6 @@ class EventSerializer(serializers.ModelSerializer):
             'id', 'user', 'is_owner', 'created_on', 'updated_on', 'title',
             'category', 'sub_category', 'event_start_date', 'event_end_date',
             'content', 'country', 'comments_count', 'interested_count',
-            'image', 'image_filter', 'profile_id', 'profile_image'
+            'join_request', 'image', 'image_filter',
+             'profile_id', 'profile_image'
         ]

@@ -14,14 +14,14 @@ class Join(models.Model):
     A class for the Join model
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    event = models.ForeignKey(Event, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255, blank=True)
-    email = models.EmailField(max_length=255, default="")
+    event = models.ForeignKey(
+        Event, related_name='join', on_delete=models.CASCADE
+    )
     created_on = models.DateTimeField(auto_now_add=True)
-    reason = models.TextField(max_length=255)
 
     class Meta:
         ordering = ['-created_on']
+        unique_together = ['user', 'event']
 
     def __str__(self):
-        return f'{self.user} for {self.event.title} : {self.reason}'
+        return f'{self.user} requested to join {self.event}'

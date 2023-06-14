@@ -25,9 +25,9 @@ class JoinListView(generics.ListCreateAPIView):
         serializer.save(user=self.request.user)
 
 
-class JoinDetailView(generics.RetrieveUpdateDestroyAPIView):
+class JoinDetailView(generics.RetrieveDestroyAPIView):
     """
-    Retrieve a join request, or update or delete it by id.
+    Retrieve a join request or delete it by id.
     """
     permission_classes = [IsUserOrReadOnly]
     serializer_class = JoinSerializer
