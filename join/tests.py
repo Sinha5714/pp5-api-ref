@@ -103,7 +103,7 @@ class JoinDetailViewTests(APITestCase):
         response = self.client.delete('/join/2/')
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
-    def test_cannot_be_able_to_send_multiple_join_to_the_same_event_twice(self):
+    def test_cannot_be_able_to_send_join_to_the_same_event_twice(self):
         self.client.login(username='user1', password='pass1')
         user1 = User.objects.get(username='user1')
         event1 = Event.objects.get(pk=1)

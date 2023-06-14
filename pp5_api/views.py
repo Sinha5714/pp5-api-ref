@@ -11,6 +11,7 @@ from .settings import (
 )
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 @api_view()
 def root_route(request):
     return Response({
