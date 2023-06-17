@@ -21,7 +21,6 @@ class InterestedListViewTests(APITestCase):
         event1 = Event.objects.create(
             user=user1,
             title='event',
-            country='Germany'
         )
 
     def test_can_list_interested(self):
@@ -68,12 +67,10 @@ class InterestedDetailViewTests(APITestCase):
         event1 = Event.objects.create(
             user=user1,
             title='User1 title',
-            country='Germany'
         )
         event2 = Event.objects.create(
             user=user2,
             title='User2 title',
-            country='Sweden'
         )
 
         Interested.objects.create(

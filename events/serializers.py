@@ -2,7 +2,6 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from rest_framework import serializers
-from django_countries.serializer_fields import CountryField
 
 # Internal:
 from .models import Event
@@ -14,7 +13,6 @@ class EventSerializer(serializers.ModelSerializer):
     Serializer for the Events model
     """
     user = serializers.ReadOnlyField(source='user.username')
-    country = CountryField()
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='user.profile.id')
     profile_image = serializers.ReadOnlyField(
@@ -48,7 +46,7 @@ class EventSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'user', 'is_owner', 'created_on', 'updated_on', 'title',
             'category', 'sub_category', 'event_start_date', 'event_end_date',
-            'content', 'country', 'comments_count', 'interested_count',
+            'content', 'comments_count', 'interested_count',
             'join_request', 'image', 'image_filter',
             'profile_id', 'profile_image'
         ]

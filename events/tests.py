@@ -53,16 +53,15 @@ class EventDetailViewTests(APITestCase):
         Event.objects.create(
             user=user1,
             title='user1 title',
-            country='Germany'
         )
         Event.objects.create(
             user=user2,
             title='user2 title',
-            country='Belgium')
+        )
         Event.objects.create(
             user=user3,
             title='user3 title',
-            country='Sweden')
+        )
 
     def test_can_retrieve_event_using_valid_id(self):
         response = self.client.get('/events/2/')
@@ -76,7 +75,7 @@ class EventDetailViewTests(APITestCase):
     def test_user_can_update_own_events_if_logged_in(self):
         self.client.login(username='user2', password='pass2')
         response = self.client.put(
-            '/events/2/', {'title': 'new title', 'country': 'Germany'}
+            '/events/2/', {'title': 'new title'}
         )
         event = Event.objects.filter(pk=2).first()
         self.assertEqual(event.title, 'new title')

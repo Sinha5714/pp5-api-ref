@@ -21,7 +21,6 @@ class JoinListViewTests(APITestCase):
         event1 = Event.objects.create(
             user=user1,
             title='event',
-            country='Germany'
         )
 
     def test_can_list_join_request(self):
@@ -68,21 +67,21 @@ class JoinDetailViewTests(APITestCase):
         event1 = Event.objects.create(
             user=user1,
             title='User1 title',
-            country='Germany'
         )
         event2 = Event.objects.create(
             user=user2,
             title='User2 title',
-            country='Sweden'
         )
 
         Join.objects.create(
             user=user1,
-            event=event1
+            event=event1,
+            name='user1 name'
         )
         Join.objects.create(
             user=user2,
-            event=event2
+            event=event2,
+            name='user2 name'
         )
 
     def test_can_retrieve_join_request_using_valid_id(self):

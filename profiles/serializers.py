@@ -2,7 +2,6 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from rest_framework import serializers
-from django_countries.serializer_fields import CountryField
 
 # Internal:
 from .models import Profile
@@ -15,7 +14,6 @@ class ProfileSerializer(serializers.ModelSerializer):
     Serializer for the Profile model
     """
     user = serializers.ReadOnlyField(source='user.username')
-    country = CountryField()
     is_owner = serializers.SerializerMethodField()
     following_id = serializers.SerializerMethodField()
     events_count = serializers.ReadOnlyField()
@@ -39,7 +37,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         model = Profile
         fields = [
             'id', 'user', 'is_owner', 'created_on', 'updated_on', 'name',
-            'country', 'about_me', 'instagram_link', 'facebook_link',
+            'about_me', 'instagram_link', 'facebook_link',
             'phone_number', 'email', 'profile_pic', 'following_id',
             'events_count', 'followers_count', 'following_count',
         ]

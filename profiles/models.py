@@ -3,7 +3,6 @@
 # 3rd party:
 from django.db import models
 from django.contrib.auth.models import User
-from django_countries.fields import CountryField
 from django.db.models.signals import post_save
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14,7 +13,6 @@ class Profile(models.Model):
     updated_on = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=255, blank=True)
     about_me = models.TextField(blank=True)
-    country = CountryField(null=True, blank=True, blank_label='Select country')
     instagram_link = models.URLField(max_length=200, blank=True)
     facebook_link = models.URLField(max_length=200, blank=True)
     phone_number = models.IntegerField(blank=True, null=True)

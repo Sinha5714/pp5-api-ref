@@ -21,7 +21,6 @@ class CommentsListViewTests(APITestCase):
         event1 = Event.objects.create(
             user=user1,
             title='Test Event',
-            country='Germany'
         )
 
     def test_can_list_comments(self):
@@ -72,7 +71,6 @@ class CommentDetailViewTests(APITestCase):
         event1 = Event.objects.create(
             user=user1,
             title='user1 title',
-            country='Germany'
         )
         Comment.objects.create(
             user=user1,

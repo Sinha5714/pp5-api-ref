@@ -64,7 +64,7 @@ class FollowerListViewTests(APITestCase):
         """
         self.client.login(username='user1', password='pass1')
         response = self.client.post(
-            '/followers/', {'owner': 1, 'followed': 3}
+            '/followers/', {'user': 1, 'followed': 3}
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
