@@ -30,8 +30,12 @@ class EventList(generics.ListCreateAPIView):
         DjangoFilterBackend,
     ]
     filterset_fields = {
+        'user__followed__user__profile': ['exact'],
+        'interested__user__profile': ['exact'],
+        'join__user__profile': ['exact'],
         'user__profile': ['exact'],
         'category': ['exact'],
+        'event_start_date': ['lte'],
     }
     search_fields = [
         'user__username',
@@ -42,7 +46,9 @@ class EventList(generics.ListCreateAPIView):
     ordering_fields = [
         'comments_count',
         'interested_count',
+        'interested__created_on'
         'join_request',
+        'join__created_on',
         'event_start_date',
     ]
 
@@ -59,4 +65,5 @@ class EventDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Event.objects.annotate(
         comments_count=Count('comment', distinct=True),
         interested_count=Count('interested', distinct=True),
+        join_request=Count('join', distinct=True),
     ).order_by('-created_on')
