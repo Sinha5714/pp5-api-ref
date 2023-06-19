@@ -5,6 +5,8 @@ from rest_framework import serializers
 
 # Internal:
 from .models import Event
+from interested.models import Interested
+from join.models import Join
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -21,6 +23,8 @@ class EventSerializer(serializers.ModelSerializer):
     comments_count = serializers.ReadOnlyField()
     interested_count = serializers.ReadOnlyField()
     join_request = serializers.ReadOnlyField()
+    interested_id = serializers.SerializerMethodField()
+    join_id = serializers.SerializerMethodField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -41,12 +45,30 @@ class EventSerializer(serializers.ModelSerializer):
             )
         return value
 
+    def get_interested_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            interested = Interested.objects.filter(
+                user=user, event=obj
+            ).first()
+            return interested.id if interested else None
+        return None
+
+    def get_join_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            join = Join.objects.filter(
+                user=user, event=obj
+            ).first()
+            return join.id if join else None
+        return None
+
     class Meta:
         model = Event
         fields = [
             'id', 'user', 'is_owner', 'created_on', 'updated_on', 'title',
             'category', 'sub_category', 'event_start_date', 'event_end_date',
-            'content', 'comments_count', 'interested_count',
-            'join_request', 'image', 'image_filter',
+            'content', 'comments_count', 'interested_count', 'interested_id',
+            'join_request', 'join_id', 'image', 'image_filter',
             'profile_id', 'profile_image'
         ]
