@@ -22,6 +22,7 @@ class ProfileList(generics.ListAPIView):
         events_count=Count('user__event', distinct=True),
         followers_count=Count('user__followed', distinct=True),
         following_count=Count('user__following', distinct=True),
+        join_request=Count('user__join', distinct=True),
     ).order_by('-created_on')
 
     filter_backends = [
@@ -36,6 +37,7 @@ class ProfileList(generics.ListAPIView):
         'events_count',
         'followers_count',
         'following_count',
+        'join_request',
         'user__following__created_on',
         'user__followed__created_on',
     ]
@@ -51,4 +53,5 @@ class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
         events_count=Count('user__event', distinct=True),
         followers_count=Count('user__followed', distinct=True),
         following_count=Count('user__following', distinct=True),
+        join_request=Count('user__join', distinct=True),
     ).order_by('-created_on')

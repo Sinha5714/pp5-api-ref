@@ -19,6 +19,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     events_count = serializers.ReadOnlyField()
     followers_count = serializers.ReadOnlyField()
     following_count = serializers.ReadOnlyField()
+    join_request = serializers.ReadOnlyField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -40,4 +41,5 @@ class ProfileSerializer(serializers.ModelSerializer):
             'about_me', 'instagram_link', 'facebook_link',
             'phone_number', 'email', 'profile_pic', 'following_id',
             'events_count', 'followers_count', 'following_count',
+            'join_request'
         ]
