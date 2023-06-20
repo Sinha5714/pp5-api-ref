@@ -2,10 +2,11 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from rest_framework import generics, permissions
-from pp5_api.permissions import IsUserOrReadOnly
+from django_filters.rest_framework import DjangoFilterBackend
 
 # Internal:
 from .models import Comment
+from pp5_api.permissions import IsUserOrReadOnly
 from .serializers import CommentSerializer, CommentDetailSerializer
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -17,6 +18,8 @@ class CommentListView(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Comment.objects.all()
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['event']
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)

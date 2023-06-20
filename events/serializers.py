@@ -70,5 +70,5 @@ class EventSerializer(serializers.ModelSerializer):
             'category', 'sub_category', 'event_start_date', 'event_end_date',
             'content', 'comments_count', 'interested_count', 'interested_id',
             'join_request', 'join_id', 'image', 'image_filter',
-            'profile_id', 'profile_image'
+            'profile_id', 'profile_image',
         ]
