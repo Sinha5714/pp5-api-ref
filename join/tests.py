@@ -76,12 +76,10 @@ class JoinDetailViewTests(APITestCase):
         Join.objects.create(
             user=user1,
             event=event1,
-            name='user1 name'
         )
         Join.objects.create(
             user=user2,
             event=event2,
-            name='user2 name'
         )
 
     def test_can_retrieve_join_request_using_valid_id(self):

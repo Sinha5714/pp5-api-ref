@@ -17,8 +17,6 @@ class Join(models.Model):
     event = models.ForeignKey(
         Event, related_name='join', on_delete=models.CASCADE
     )
-    name = models.CharField(max_length=255, default='', blank=False)
-    email = models.EmailField(max_length=255, default='', blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
