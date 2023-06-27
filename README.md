@@ -189,3 +189,50 @@ The overall structure of the project was made with the help of Code Institute wa
 | user       | user         | ForeignKey    | User, on_delete=models.CASCADE , related_name='following' |
 | followed   | followed     | ForeignKey    | User, on_delete=models.CASCADE ,related_name='followed'   |
 | created_on | created_on   | DateTimeField | auto_now_add=True                                         |
+
+## Features
+
+### Home Page
+
+- This is the welcoming page for all users
+- Once user opens the API site, this page appears in front of him.
+
+<details><summary>See API Site Homepage</summary>
+
+![API Site Homepage](images/pages/homepage.png)
+
+</details>
+- When user opens the deployed API site, this page appears in front of him.
+
+<details><summary>See Deployed API Site Homepage</summary>
+
+![Deployed API Site Homepage](images/pages/homepagedeployed.png)
+
+</details>
+
+### Profile List Page
+
+- This page consists of profile list of all users
+
+<details><summary>See Profile List Page</summary>
+
+![Profile List Page](images/pages/profilelists.png)
+
+</details>
+
+### Profile Detail Page
+
+- This page consists of profile detail page
+- If user is owner he can edit and delete his profile
+
+<details><summary>See Profile Detail Page</summary>
+
+![Profile Detail Page](images/pages/profiledetail.png)
+
+</details>
+
+<details><summary>See Profile Owner Detail Page</summary>
+
+![Profile Owner Detail Page](images/pages/profileloggedindetail.png)
+
+</details>
