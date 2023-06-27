@@ -196,6 +196,165 @@
 
 </details>
 
+15. As a site owner/developer I can view the list of interested shown on events so that I can see all the interested created in the API for the events
+
+| **Step**                                 | **Expected Result**        | **Actual Result** |
+| ---------------------------------------- | -------------------------- | ----------------- |
+| Add "/interested" in deployed url        | interested list page opens | Work as expected  |
+| User scrolls through the interested list | interested are displayed   | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory15.png" >
+
+</details>
+
+16. As a site owner/developer I can retrieve interested by id so that I can be able to make changes to it
+
+| **Step**                             | **Expected Result**          | **Actual Result** |
+| ------------------------------------ | ---------------------------- | ----------------- |
+| Add "/interested/id" in deployed url | interested detail page loads | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory16.png" >
+
+</details>
+
+17. As a site owner/developer I can add interested functionality for events so that I can show interest for the event
+
+| **Step**                            | **Expected Result**                          | **Actual Result** |
+| ----------------------------------- | -------------------------------------------- | ----------------- |
+| User log in                         | logged in status is shown in top right       | Work as expected  |
+| Add "/interested" in deployed url   | interested lists page loads with create form | Work as expected  |
+| User select event and click on post | interested is shown in interested list       | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory17-1.png" >
+<img src="images/manualtesting/userstory17-2.png" >
+
+</details>
+
+18. As a site owner/developer I can delete interested functionality to event so that I can delete my interested instance if not interested anymore
+
+| **Step**                                                       | **Expected Result**                             | **Actual Result** |
+| -------------------------------------------------------------- | ----------------------------------------------- | ----------------- |
+| User log in                                                    | logged in status is shown in top right          | Work as expected  |
+| Add "/interested/id" in deployed url (id of user's interested) | interested detail page loads with delete button | Work as expected  |
+| User clicks on delete button                                   | a modal confirming delete occurs                | Work as expected  |
+| User clicks on delete button                                   | interested is deleted                           | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory18-1.png" >
+<img src="images/manualtesting/userstory18-2.png" >
+<img src="images/manualtesting/userstory18-3.png" >
+
+</details>
+
+19. As a site owner/developer I can view a list of join request for an event so that I can view how many request has been requested
+
+| **Step**                           | **Expected Result**  | **Actual Result** |
+| ---------------------------------- | -------------------- | ----------------- |
+| Add "/join" in deployed url        | join list page opens | Work as expected  |
+| User scrolls through the join list | join are displayed   | Work as expected  |
+
+ <details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory19.png" >
+
+</details>
+
+20. As a site owner/developer I can retrieve join request so that I can make changes to it
+
+| **Step**                       | **Expected Result**    | **Actual Result** |
+| ------------------------------ | ---------------------- | ----------------- |
+| Add "/join/id" in deployed url | join detail page loads | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory20.png" >
+
+</details>
+
+21. As a site owner/developer I can create a join request for an event so that I can join an event
+
+| **Step**                            | **Expected Result**                    | **Actual Result** |
+| ----------------------------------- | -------------------------------------- | ----------------- |
+| User log in                         | logged in status is shown in top right | Work as expected  |
+| Add "/join" in deployed url         | join list page loads with create form  | Work as expected  |
+| User select event and click on post | join is shown in join list             | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory21-1.png">
+<img src="images/manualtesting/userstory21-2.png" >
+
+</details>
+
+22. As a site owner/developer I can delete join request so that I can delete join request which is not approved anymore
+
+| **Step**                                           | **Expected Result**                       | **Actual Result** |
+| -------------------------------------------------- | ----------------------------------------- | ----------------- |
+| User log in                                        | logged in status is shown in top right    | Work as expected  |
+| Add "/join/id" in deployed url (id of user's join) | join detail page loads with delete button | Work as expected  |
+| User clicks on delete button                       | a modal confirming delete occurs          | Work as expected  |
+| User clicks on delete button                       | join is deleted                           | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory22-1.png" >
+<img src="images/manualtesting/userstory22-2.png" >
+<img src="images/manualtesting/userstory22-3.png" >
+
+</details>
+
+23. As a site owner/developer I can view a list of followers so that I can view who is following
+
+| **Step**                                | **Expected Result**       | **Actual Result** |
+| --------------------------------------- | ------------------------- | ----------------- |
+| Add "/followers" in deployed url        | followers list page opens | Work as expected  |
+| User scrolls through the followers list | followers are displayed   | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory23.png" >
+
+</details>
+
+24. As a site owner/ developer I can retrieve followers by id so that I can make changes to it
+
+| **Step**                            | **Expected Result**         | **Actual Result** |
+| ----------------------------------- | --------------------------- | ----------------- |
+| Add "/followers/id" in deployed url | followers detail page loads | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory24.png" >
+
+</details>
+
+25. As a site owner/developer I can create follow so that I can follow another user
+
+| **Step**                           | **Expected Result**                         | **Actual Result** |
+| ---------------------------------- | ------------------------------------------- | ----------------- |
+| User log in                        | logged in status is shown in top right      | Work as expected  |
+| Add "/followers" in deployed url   | followers lists page loads with create form | Work as expected  |
+| User select user and click on post | followers is shown in followers list        | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory25-1.png" >
+<img src="images/manualtesting/userstory25-2.png" >
+
+</details>
+
+26. As a site owner/developer I can delete a follow so that I can unfollow another user
+
+| **Step**                                                     | **Expected Result**                            | **Actual Result** |
+| ------------------------------------------------------------ | ---------------------------------------------- | ----------------- |
+| User log in                                                  | logged in status is shown in top right         | Work as expected  |
+| Add "/followers/id" in deployed url (id of user's followers) | followers detail page loads with delete button | Work as expected  |
+| User clicks on delete button                                 | a modal confirming delete occurs               | Work as expected  |
+| User clicks on delete button                                 | follower is deleted                            | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory26-1.png" >
+<img src="images/manualtesting/userstory26-2.png" >
+<img src="images/manualtesting/userstory26-3.png" >
+
+</details>
+
 ## Bugs
 
 ### CI Python Linter
