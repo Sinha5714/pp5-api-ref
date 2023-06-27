@@ -34,46 +34,46 @@ The overall structure of the project was made with the help of Code Institute wa
 
 ### Profiles
 
-- As a site owner/developer I can view lists of profiles so that I can can see how many profiles has been created
-- As a site owner/developer I can view the details of a profile so that I can see individual profile data
-- As a site owner/developer I can update my profile so that I can change data when I want
-- As a site owner/developer I can delete profile so that I can delete profile which I don't want to continue with
+1. As a site owner/developer I can view lists of profiles so that I can can see how many profiles has been created
+2. As a site owner/developer I can view the details of a profile so that I can see individual profile data
+3. As a site owner/developer I can update my profile so that I can change data when I want
+4. As a site owner/developer I can delete profile so that I can delete profile which I don't want to continue with
 
 ### Events
 
-- As a site owner/developer I can view a list of all events so that I can see all events at once
-- As a site owner/developer I can view a single event so that I can view the detail of event including comment counts, interested_count and join_request
-- As a site owner/developer I can create an event so that I can share what events are upcoming
-- As a site owner/developer I can edit an event so that I can change the data with correct information
-- As a site owner/developer I can delete event so that I can remove the event not valid or cancelled
+5. As a site owner/developer I can view a list of all events so that I can see all events at once
+6. As a site owner/developer I can view a single event so that I can view the detail of event including comment counts, interested_count and join_request
+7. As a site owner/developer I can create an event so that I can share what events are upcoming
+8. As a site owner/developer I can edit an event so that I can change the data with correct information
+9. As a site owner/developer I can delete event so that I can remove the event not valid or cancelled
 
 ### Comments
 
-- As a site owner/developer I can view list of all comments so that I can see all comments for the events
-- As a site owner/developer I can retrieve a comment by its id so that I can edit/delete the comment
-- As a site owner/developer I can add comments to events so that I can interact with various people regarding an event
-- As a site owner/developer I can edit/update comment so that I can change what I have commented
-- As a site owner/developer I can delete comments on events so that I can delete unwanted comments or my written comments
+10. As a site owner/developer I can view list of all comments so that I can see all comments for the events
+11. As a site owner/developer I can retrieve a comment by its id so that I can edit/delete the comment
+12. As a site owner/developer I can add comments to events so that I can interact with various people regarding an event
+13. As a site owner/developer I can edit/update comment so that I can change what I have commented
+14. As a site owner/developer I can delete comments on events so that I can delete unwanted comments or my written comments
 
 ### Interested
 
-- As a site owner/developer I can view the list of interested shown on events so that I can see all the interested created in the API for the events
-- As a site owner/developer I can retrieve interested by id so that I can be able to make changes to it
-- As a site owner/developer I can add interested functionality for events so that I can show interest for the event
-- As a site owner/developer I can delete interested functionality to event so that I can delete my interested instance if not interested anymore
+15. As a site owner/developer I can view the list of interested shown on events so that I can see all the interested created in the API for the events
+16. As a site owner/developer I can retrieve interested by id so that I can be able to make changes to it
+17. As a site owner/developer I can add interested functionality for events so that I can show interest for the event
+18. As a site owner/developer I can delete interested functionality to event so that I can delete my interested instance if not interested anymore
 
 ### Join
 
-- As a site owner/developer I can view a list of join request for an event so that I can view how many request has been requested
-- As a site owner/developer I can retrieve join request so that I can make changes to it
-- As a site owner/developer I can create a join request for an event so that I can join an event
-- As a site owner/developer I can delete join request so that I can delete join request which is not approved anymore
+19. As a site owner/developer I can view a list of join request for an event so that I can view how many request has been requested
+20. As a site owner/developer I can retrieve join request so that I can make changes to it
+21. As a site owner/developer I can create a join request for an event so that I can join an event
+22. As a site owner/developer I can delete join request so that I can delete join request which is not approved anymore
 
 ### Followers
 
-- As a site owner/developer I can view a list of followers so that I can view who is following whom
-- As a site owner/developer I can create follow so that I can follow another user
-- As a site owner/developer I can delete a follow so that I can unfollow another user
+23. As a site owner/developer I can view a list of followers so that I can view who is following whom
+24. As a site owner/developer I can create follow so that I can follow another user
+25. As a site owner/developer I can delete a follow so that I can unfollow another user
 
 ## Database Design
 
@@ -275,7 +275,7 @@ The overall structure of the project was made with the help of Code Institute wa
 ### Comment List Page
 
 - This page consists of comment list of all comments posted for events
-- This page also consist a comment create form for logged in user
+- This page also consist a comment create form for logged in user with event options
 
 <details><summary>See Comment List Page</summary>
 
@@ -297,5 +297,64 @@ The overall structure of the project was made with the help of Code Institute wa
 <details><summary>See Comment Detail Page with Edit form</summary>
 
 ![Comment Detail Page](images/pages/commentdetail.png)
+
+</details>
+
+### Interested List Page
+
+- This page consists of interested list of all interests shown for events
+- This page also consist a interested create form for logged in user with event options
+- If user want to show interest again a validation error is thrown
+
+<details><summary>See Interested List Page with Create Form</summary>
+
+![Interested List Page with Create Form](images/pages/interestedlistloggedin.png)
+
+</details>
+
+<details><summary>See Interested List Page with Error</summary>
+
+![Interested List Page with Error](images/pages/interestedlisterror.png)
+
+</details>
+
+### Interested Detail Page
+
+- This page consists of interested detail
+- If user has shown interest he can delete his interest
+
+<details><summary>See Interested Detail Page</summary>
+
+![Interested Detail Page](images/pages/interesteddetail.png)
+
+</details>
+
+### Join List Page
+
+- This page consists of join list of all join request sent for events
+- This page also consist a join create form for logged in user with event options
+- If user want to send join request again a validation error is thrown
+
+<details><summary>See Join List Page with Create Form</summary>
+
+![Join List Page](images/pages/joinlist.png)
+![Join List Page with Create Form](images/pages/joinlistloggedin.png)
+
+</details>
+
+<details><summary>See Join List Page with Error</summary>
+
+![Join List Page with Error](images/pages/joinlisterror.png)
+
+</details>
+
+### Join Detail Page
+
+- This page consists of join detail
+- If user has sent request he can delete his request
+
+<details><summary>See Join Detail Page</summary>
+
+![Join Detail Page](images/pages/joindetail.png)
 
 </details>
