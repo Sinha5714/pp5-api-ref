@@ -25,6 +25,7 @@ This repository contains the API set up using Django REST Framework for the Huma
     - [Interested Model](#interested-model)
     - [Join Model](#join-model)
     - [Followers Model](#followers-model)
+- [Features](#features)
 
 ## Project Structure
 
@@ -335,7 +336,7 @@ The overall structure of the project was made with the help of Code Institute wa
 - This page also consist a join create form for logged in user with event options
 - If user want to send join request again a validation error is thrown
 
-<details><summary>See Join List Page with Create Form</summary>
+<details><summary>See Join List Page</summary>
 
 ![Join List Page](images/pages/joinlist.png)
 ![Join List Page with Create Form](images/pages/joinlistloggedin.png)
@@ -356,5 +357,34 @@ The overall structure of the project was made with the help of Code Institute wa
 <details><summary>See Join Detail Page</summary>
 
 ![Join Detail Page](images/pages/joindetail.png)
+
+</details>
+
+### Followers List Page
+
+- This page consists of followers list of all user following each other
+- This page also consist a followers create form for logged in user with other users options
+- If user want to follow a followed user again a validation error is thrown
+
+<details><summary>See Follower List Page with Create Form</summary>
+
+![Follower List Page with Create Form](images/pages/followerlistform.png)
+
+</details>
+
+<details><summary>See Follower List Page with Error</summary>
+
+![Follower List Page with Error](images/pages/followerlisterror.png)
+
+</details>
+
+### Followers Detail Page
+
+- This page consists of followers detail
+- If user has followed another user he can delete his follow
+
+<details><summary>See Followers Detail Page</summary>
+
+![Follow Detail Page](images/pages/followerdetail.png)
 
 </details>
