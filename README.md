@@ -16,6 +16,19 @@ This repository contains the API set up using Django REST Framework for the Huma
     - [Interested](#interested)
     - [Join](#join)
     - [Followers](#followers)
+- [Database Design](#database-design)
+  - [Models](#models)
+    - [User Model](#user-model)
+    - [Profile Model](#profile-model)
+    - [Event Model](#event-model)
+    - [Comment Model](#comment-model)
+    - [Interested Model](#interested-model)
+    - [Join Model](#join-model)
+    - [Followers Model](#followers-model)
+
+## Project Structure
+
+The overall structure of the project was made with the help of Code Institute walthrough project [drf-api](https://github.com/Code-Institute-Solutions/drf-api) including models, views and serializers.
 
 ## User Stories
 
@@ -61,6 +74,8 @@ This repository contains the API set up using Django REST Framework for the Huma
 - As a site owner/developer I can view a list of followers so that I can view who is following whom
 - As a site owner/developer I can create follow so that I can follow another user
 - As a site owner/developer I can delete a follow so that I can unfollow another user
+
+## Database Design
 
 ### Data Models
 
@@ -133,9 +148,9 @@ This repository contains the API set up using Django REST Framework for the Huma
 | created_on       | created_on       | DateTimeField | auto_now_add=True                                                 |
 | updated_on       | updated_on       | DateTimeField | auto_now_add=True                                                 |
 
-#### Comments model
+#### Comment model
 
-- Comments model was created for user to comment on an event
+- Comment model was created for user to comment on an event
 
 | Name       | Database Key | Field Type    | Validation                      |
 | ---------- | ------------ | ------------- | ------------------------------- |
