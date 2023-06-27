@@ -95,9 +95,10 @@ Project code structure is organized and divided into various application folders
 
 ### Followers
 
-23. As a site owner/developer I can view a list of followers so that I can view who is following whom
-24. As a site owner/developer I can create follow so that I can follow another user
-25. As a site owner/developer I can delete a follow so that I can unfollow another user
+23. As a site owner/developer I can view a list of followers so that I can view who is following
+24. As a site owner/ developer I can retrieve followers by id so that I can make changes to it
+25. As a site owner/developer I can create follow so that I can follow another user
+26. As a site owner/developer I can delete a follow so that I can unfollow another user
 
 ## Technologies Used
 
@@ -314,6 +315,7 @@ Project code structure is organized and divided into various application folders
 ### Profile List Page
 
 - This page consists of profile list of all users
+- **User Story Covered**: 1
 
 <details><summary>See Profile List Page</summary>
 
@@ -325,6 +327,7 @@ Project code structure is organized and divided into various application folders
 
 - This page consists of profile detail page
 - If user is owner he can edit and delete his profile
+- **User Story Covered**: 2, 3, 4
 
 <details><summary>See Profile Detail Page</summary>
 
@@ -342,6 +345,7 @@ Project code structure is organized and divided into various application folders
 
 - This page consists of event list of all events which have been posted
 - This page also consist a event create form for logged in user
+- **User Story Covered**: 5, 7
 
 <details><summary>See Event List Page</summary>
 
@@ -359,6 +363,7 @@ Project code structure is organized and divided into various application folders
 
 - This page consists of event detail
 - If user is owner he can edit and delete his event what he has posted
+- **User Story Covered**: 6, 8, 9
 
 <details><summary>See Event Detail Page</summary>
 
@@ -376,6 +381,7 @@ Project code structure is organized and divided into various application folders
 
 - This page consists of comment list of all comments posted for events
 - This page also consist a comment create form for logged in user with event options
+- **User Story Covered**: 10, 12
 
 <details><summary>See Comment List Page</summary>
 
@@ -393,6 +399,7 @@ Project code structure is organized and divided into various application folders
 
 - This page consists of comment detail
 - If user is owner he can edit and delete his comments what he has posted
+- **User Story Covered**: 11, 13, 14
 
 <details><summary>See Comment Detail Page with Edit form</summary>
 
@@ -405,6 +412,7 @@ Project code structure is organized and divided into various application folders
 - This page consists of interested list of all interests shown for events
 - This page also consist a interested create form for logged in user with event options
 - If user want to show interest again a validation error is thrown
+- **User Story Covered**: 15, 17
 
 <details><summary>See Interested List Page with Create Form</summary>
 
@@ -422,6 +430,7 @@ Project code structure is organized and divided into various application folders
 
 - This page consists of interested detail
 - If user has shown interest he can delete his interest
+- **User Story Covered**: 16, 18
 
 <details><summary>See Interested Detail Page</summary>
 
@@ -434,6 +443,7 @@ Project code structure is organized and divided into various application folders
 - This page consists of join list of all join request sent for events
 - This page also consist a join create form for logged in user with event options
 - If user want to send join request again a validation error is thrown
+- **User Story Covered**: 19, 21
 
 <details><summary>See Join List Page</summary>
 
@@ -452,6 +462,7 @@ Project code structure is organized and divided into various application folders
 
 - This page consists of join detail
 - If user has sent request he can delete his request
+- **User Story Covered**: 20, 22
 
 <details><summary>See Join Detail Page</summary>
 
@@ -464,6 +475,7 @@ Project code structure is organized and divided into various application folders
 - This page consists of followers list of all user following each other
 - This page also consist a followers create form for logged in user with other users options
 - If user want to follow a followed user again a validation error is thrown
+- **User Story Covered**: 23, 25
 
 <details><summary>See Follower List Page with Create Form</summary>
 
@@ -481,6 +493,7 @@ Project code structure is organized and divided into various application folders
 
 - This page consists of followers detail
 - If user has followed another user he can delete his follow
+- **User Story Covered**: 24, 26
 
 <details><summary>See Followers Detail Page</summary>
 
