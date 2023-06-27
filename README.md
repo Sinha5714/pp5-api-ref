@@ -271,3 +271,31 @@ The overall structure of the project was made with the help of Code Institute wa
 ![Event Owner Edit Form](images/pages/evendetailform.png)
 
 </details>
+
+### Comment List Page
+
+- This page consists of comment list of all comments posted for events
+- This page also consist a comment create form for logged in user
+
+<details><summary>See Comment List Page</summary>
+
+![Comment List Page](images/pages/commentlist.png)
+
+</details>
+
+<details><summary>See Comment List - Create Form </summary>
+
+![Comment List - Create Form](images/pages/commentlistcreate.png)
+
+</details>
+
+### Comment Detail Page
+
+- This page consists of comment detail
+- If user is owner he can edit and delete his comments what he has posted
+
+<details><summary>See Comment Detail Page with Edit form</summary>
+
+![Comment Detail Page](images/pages/commentdetail.png)
+
+</details>
