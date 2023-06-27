@@ -87,11 +87,11 @@
 
 7. As a site owner/developer I can create an event so that I can share what events are upcoming
 
-| **Step**                            | **Expected Result**                        | **Actual Result** |
-| ----------------------------------- | ------------------------------------------ | ----------------- |
-| User log in                         | logged in status is shown in top right     | Work as expected  |
-| Add "/events" in deployed url       | profile detail page loads with create form | Work as expected  |
-| User add the data and click on post | new event is shown in events list          | Work as expected  |
+| **Step**                            | **Expected Result**                      | **Actual Result** |
+| ----------------------------------- | ---------------------------------------- | ----------------- |
+| User log in                         | logged in status is shown in top right   | Work as expected  |
+| Add "/events" in deployed url       | events lists page loads with create form | Work as expected  |
+| User add the data and click on post | new event is shown in events list        | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="images/manualtesting/userstory7-1.png" >
@@ -126,6 +126,73 @@
 <img src="images/manualtesting/userstory9-1.png" >
 <img src="images/manualtesting/userstory9-2.png" >
 <img src="images/manualtesting/userstory9-3.png" >
+
+</details>
+
+10. As a site owner/developer I can view list of all comments so that I can see all comments for the events
+
+| **Step**                               | **Expected Result**      | **Actual Result** |
+| -------------------------------------- | ------------------------ | ----------------- |
+| Add "/comments" in deployed url        | comments list page opens | Work as expected  |
+| User scrolls through the comments list | comments are displayed   | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory10.png" >
+
+</details>
+
+11. As a site owner/developer I can retrieve a comment by its id so that I can edit/delete the comment
+
+| **Step**                           | **Expected Result**       | **Actual Result** |
+| ---------------------------------- | ------------------------- | ----------------- |
+| Add "/comments/id" in deployed url | comment detail page loads | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory11.png" >
+
+</details>
+
+12. As a site owner/developer I can add comments to events so that I can interact with various people regarding an event
+
+| **Step**                            | **Expected Result**                       | **Actual Result** |
+| ----------------------------------- | ----------------------------------------- | ----------------- |
+| User log in                         | logged in status is shown in top right    | Work as expected  |
+| Add "/comments" in deployed url     | comment lists page loads with create form | Work as expected  |
+| User add the data and click on post | comment is shown in comments list         | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory12-1.png" >
+<img src="images/manualtesting/userstory12-2.png" >
+
+</details>
+
+13. As a site owner/developer I can edit/update comment so that I can change what I have commented
+
+| **Step**                                                  | **Expected Result**                      | **Actual Result** |
+| --------------------------------------------------------- | ---------------------------------------- | ----------------- |
+| User log in                                               | logged in status is shown in top right   | Work as expected  |
+| Add "/comments/id" in deployed url (id of user's comment) | comment detail page loads with edit form | Work as expected  |
+| User update the data and click on put                     | updated data is shown in comments list   | Work as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="images/manualtesting/userstory13-1.png" >
+<img src="images/manualtesting/userstory13-2.png" >
+
+</details>
+
+14. As a site owner/developer I can delete comments on events so that I can delete unwanted comments or my written comments
+
+| **Step**                                                  | **Expected Result**                          | **Actual Result** |
+| --------------------------------------------------------- | -------------------------------------------- | ----------------- |
+| User log in                                               | logged in status is shown in top right       | Work as expected  |
+| Add "/comments/id" in deployed url (id of user's comment) | comment detail page loads with delete button | Work as expected  |
+| User clicks on delete button                              | a modal confirming delete occurs             | Work as expected  |
+| User clicks on delete button                              | comment is deleted                           | Work as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="images/manualtesting/userstory14-1.png" >
+<img src="images/manualtesting/userstory14-2.png" >
+<img src="images/manualtesting/userstory14-3.png" >
 
 </details>
 
