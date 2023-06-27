@@ -61,3 +61,74 @@ This repository contains the API set up using Django REST Framework for the Huma
 - As a site owner/developer I can view a list of followers so that I can view who is following whom
 - As a site owner/developer I can create follow so that I can follow another user
 - As a site owner/developer I can delete a follow so that I can unfollow another user
+
+### Data Models
+
+#### User Model
+
+- User model as part of the Django Rest Framework dj-rest-auth library contains basic information about authenticated user and contains folowing fields:
+  Username, Password, Email
+
+#### Profile model
+
+- Profile model is created for user to add their details and image for better interaction with the website
+
+| Name           | Database Key   | Field Type    | Validation                                      |
+| -------------- | -------------- | ------------- | ----------------------------------------------- |
+| user           | user           | OneToOneField | User, on_delete=models.CASCADE                  |
+| profile_pic    | profile_pic    | ImageField    | upload_to='images/', default='../avatar_zavejy' |
+| name           | name           | CharField     | max_length=255 blank=True                       |
+| about_me       | about_me       | TextField     | blank=True                                      |
+| email          | email          | EmailField    | max_length=255 blank=True                       |
+| instagram_link | instagram_link | URLField      | max_length=200 blank=True                       |
+| facebook_link  | facebook_link  | URLField      | max_length=200 blank=True                       |
+| phone_number   | phone_number   | IntegerField  | null=True blank=True                            |
+| created_on     | created_on     | DateTimeField | auto_now_add=True                               |
+| updated_on     | updated_on     | DateTimeField | auto_now_add=True                               |
+
+#### Event model
+
+- Event model is created for user to add events in the website
+- Following categories choices were added for user to select for an event
+
+  - EVENT_CATEGORIES = (
+    ("Discrimination", "Descrimination"),
+    ("LQBTQ", "LGBTQ"),
+    ("Equal-Rights", "Equal Rights"),
+    ("Marraige-Rights", "Marraige Rights"),
+    ("Work-Rights", "Work Rights"),
+    ("Education-Rights", "Education Rights"),
+    )
+
+  - EVENT_SUB_CATEGORIES = (
+    ("Seminars", "Seminars"),
+    ("Meet-ups", "Meet-ups"),
+    ("Retreats", "Retreats"),
+    )
+
+- Following image filter choices were added for user to filter image
+
+  - image_filter_choices = [
+    ('_1977', '1977'), ('brannan', 'Brannan'),
+    ('earlybird', 'Earlybird'), ('hudson', 'Hudson'),
+    ('inkwell', 'Inkwell'), ('lofi', 'Lo-Fi'),
+    ('kelvin', 'Kelvin'), ('normal', 'Normal'),
+    ('nashville', 'Nashville'), ('rise', 'Rise'),
+    ('toaster', 'Toaster'), ('valencia', 'Valencia'),
+    ('walden', 'Walden'), ('xpro2', 'X-pro II')
+    ]
+
+| Name             | Database Key     | Field Type    | Validation                                                        |
+| ---------------- | ---------------- | ------------- | ----------------------------------------------------------------- |
+| user             | user             | ForeignKey    | User, on_delete=models.CASCADE                                    |
+| title            | title            | CharField     | max-length=255                                                    |
+| content          | content          | TextField     | max-length=255                                                    |
+| image            | image            | ImageField    | upload_to='images/', default='../equal-rights_o1owqr', blank=True |
+| image_filter     | image_filter     | CharField     | max_length=32, choices=image_filter_choices, default='Normal'     |
+| event_start_date | event_start_date | DateTimeField | blank=True, null=True                                             |
+| event_end_date   | event_end_date   | DateTimeField | blank=True, null=True                                             |
+| category         | category         | CharField     | max_length=50, choices=EVENT_CATEGORIES, default='Equal-Rights'   |
+| sub_category     | sub_category     | CharField     | max_length=50, choices=EVENT_SUB_CATEGORIES, default='Seminars'   |
+|                  |
+| created_on       | created_on       | DateTimeField | auto_now_add=True                                                 |
+| updated_on       | updated_on       | DateTimeField | auto_now_add=True                                                 |
