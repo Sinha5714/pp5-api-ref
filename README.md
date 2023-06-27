@@ -202,6 +202,7 @@ The overall structure of the project was made with the help of Code Institute wa
 ![API Site Homepage](images/pages/homepage.png)
 
 </details>
+
 - When user opens the deployed API site, this page appears in front of him.
 
 <details><summary>See Deployed API Site Homepage</summary>
@@ -234,5 +235,39 @@ The overall structure of the project was made with the help of Code Institute wa
 <details><summary>See Profile Owner Detail Page</summary>
 
 ![Profile Owner Detail Page](images/pages/profileloggedindetail.png)
+
+</details>
+
+### Event List Page
+
+- This page consists of event list of all events which have been posted
+- This page also consist a event create form for logged in user
+
+<details><summary>See Event List Page</summary>
+
+![Event List Page](images/pages/eventlist.png)
+
+</details>
+
+<details><summary>See Event List - Create Form </summary>
+
+![Event List - Create Form](images/pages/eventcreatelist.png)
+
+</details>
+
+### Event Detail Page
+
+- This page consists of event detail
+- If user is owner he can edit and delete his event what he has posted
+
+<details><summary>See Event Detail Page</summary>
+
+![Event Detail Page](images/pages/eventdetail.png)
+
+</details>
+
+<details><summary>See Event Owner Edit Form</summary>
+
+![Event Owner Edit Form](images/pages/evendetailform.png)
 
 </details>
