@@ -29,6 +29,7 @@ This repository contains the API set up using Django REST Framework for the Huma
     - [Join Model](#join-model)
     - [Followers Model](#followers-model)
 - [Features](#features)
+- [Validation](#validation)
 
 ## Project Structure
 
@@ -499,4 +500,185 @@ Project code structure is organized and divided into various application folders
 
 ![Follow Detail Page](images/pages/followerdetail.png)
 
+</details>
+
+## Validation
+
+### Python
+
+- [CI Python Linter](https://pep8ci.herokuapp.com/) was used for validation of python files.
+- NOTE: The validation was done to all custom python files written by me. Settings.py and env.py was excluded because it contains important data which is longer than 79 lines and cannot be changed.
+
+#### pp5_api Project
+
+<details><summary>Views</summary>
+<img src="images/python-test/pp5-views.png" >
+</details>
+
+<details><summary>Urls</summary>
+<img src="images/python-test/pp5-urls.png" >
+</details>
+
+<details><summary>Serializers</summary>
+<img src="images/python-test/pp5-serializers.png" >
+</details>
+
+<details><summary>Permissions</summary>
+<img src="images/python-test/pp5-permissions.png" >
+</details>
+
+##### Profiles App
+
+<details><summary>Models</summary>
+<img src="images/python-test/profile-model.png" >
+</details>
+
+<details><summary>Views</summary>
+<img src="images/python-test/profile-views.png" >
+</details>
+
+<details><summary>Admin</summary>
+<img src="images/python-test/profile-admin.png" >
+</details>
+
+<details><summary>Serializers</summary>
+<img src="images/python-test/profile-serializers.png" >
+</details>
+
+<details><summary>Urls</summary>
+<img src="images/python-test/profile-urls.png" >
+</details>
+
+<details><summary>Tests</summary>
+<img src="images/python-test/profile-tests.png" >
+</details>
+
+##### Events App
+
+<details><summary>Models</summary>
+<img src="images/python-test/events-model.png" >
+</details>
+
+<details><summary>Views</summary>
+<img src="images/python-test/events-views.png" >
+</details>
+
+<details><summary>Admin</summary>
+<img src="images/python-test/events-admin.png" >
+</details>
+
+<details><summary>Serializers</summary>
+<img src="images/python-test/events-serializers.png" >
+</details>
+
+<details><summary>Urls</summary>
+<img src="images/python-test/events-urls.png" >
+</details>
+
+<details><summary>Tests</summary>
+<img src="images/python-test/events-tests.png" >
+</details>
+
+##### Comments App
+
+<details><summary>Models</summary>
+<img src="images/python-test/comment-model.png" >
+</details>
+
+<details><summary>Views</summary>
+<img src="images/python-test/comment-views.png" >
+</details>
+
+<details><summary>Admin</summary>
+<img src="images/python-test/comment-admin.png" >
+</details>
+
+<details><summary>Serializers</summary>
+<img src="images/python-test/comment-serializers.png" >
+</details>
+
+<details><summary>Urls</summary>
+<img src="images/python-test/comment-urls.png" >
+</details>
+
+<details><summary>Tests</summary>
+<img src="images/python-test/comment-tests.png" >
+</details>
+
+##### Interested App
+
+<details><summary>Models</summary>
+<img src="images/python-test/interested-model.png" >
+</details>
+
+<details><summary>Views</summary>
+<img src="images/python-test/interested-views.png" >
+</details>
+
+<details><summary>Admin</summary>
+<img src="images/python-test/interested-admin.png" >
+</details>
+
+<details><summary>Serializers</summary>
+<img src="images/python-test/interested-serializers.png" >
+</details>
+
+<details><summary>Urls</summary>
+<img src="images/python-test/interested-urls.png" >
+</details>
+
+<details><summary>Tests</summary>
+<img src="images/python-test/interested-test.png" >
+</details>
+
+##### Join App
+
+<details><summary>Models</summary>
+<img src="images/python-test/join-model.png" >
+</details>
+
+<details><summary>Views</summary>
+<img src="images/python-test/join-views.png" >
+</details>
+
+<details><summary>Admin</summary>
+<img src="images/python-test/join-admin.png" >
+</details>
+
+<details><summary>Serializers</summary>
+<img src="images/python-test/join-serializers.png" >
+</details>
+
+<details><summary>Urls</summary>
+<img src="images/python-test/join-urls.png" >
+</details>
+
+<details><summary>Tests</summary>
+<img src="images/python-test/join-test.png" >
+</details>
+
+##### Followers App
+
+<details><summary>Models</summary>
+<img src="images/python-test/follower-model.png" >
+</details>
+
+<details><summary>Views</summary>
+<img src="images/python-test/follower-views.png" >
+</details>
+
+<details><summary>Admin</summary>
+<img src="images/python-test/follower-admin.png" >
+</details>
+
+<details><summary>Serializers</summary>
+<img src="images/python-test/follower-serializers.png" >
+</details>
+
+<details><summary>Urls</summary>
+<img src="images/python-test/follower-urls.png" >
+</details>
+
+<details><summary>Tests</summary>
+<img src="images/python-test/follower-test.png" >
 </details>

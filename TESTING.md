@@ -304,10 +304,10 @@
 
 23. As a site owner/developer I can view a list of followers so that I can view who is following
 
-| **Step**                                | **Expected Result**       | **Actual Result** |
-| --------------------------------------- | ------------------------- | ----------------- |
-| Add "/followers" in deployed url        | followers list page opens | Work as expected  |
-| User scrolls through the followers list | followers are displayed   | Work as expected  |
+| **Step**                                | **Expected Result**      | **Actual Result** |
+| --------------------------------------- | ------------------------ | ----------------- |
+| Add "/followers" in deployed url        | follower list page opens | Work as expected  |
+| User scrolls through the followers list | follower are displayed   | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="images/manualtesting/userstory23.png" >
@@ -316,9 +316,9 @@
 
 24. As a site owner/ developer I can retrieve followers by id so that I can make changes to it
 
-| **Step**                            | **Expected Result**         | **Actual Result** |
-| ----------------------------------- | --------------------------- | ----------------- |
-| Add "/followers/id" in deployed url | followers detail page loads | Work as expected  |
+| **Step**                            | **Expected Result**        | **Actual Result** |
+| ----------------------------------- | -------------------------- | ----------------- |
+| Add "/followers/id" in deployed url | follower detail page loads | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="images/manualtesting/userstory24.png" >
@@ -327,11 +327,11 @@
 
 25. As a site owner/developer I can create follow so that I can follow another user
 
-| **Step**                           | **Expected Result**                         | **Actual Result** |
-| ---------------------------------- | ------------------------------------------- | ----------------- |
-| User log in                        | logged in status is shown in top right      | Work as expected  |
-| Add "/followers" in deployed url   | followers lists page loads with create form | Work as expected  |
-| User select user and click on post | followers is shown in followers list        | Work as expected  |
+| **Step**                           | **Expected Result**                       | **Actual Result** |
+| ---------------------------------- | ----------------------------------------- | ----------------- |
+| User log in                        | logged in status is shown in top right    | Work as expected  |
+| Add "/followers" in deployed url   | follower list page loads with create form | Work as expected  |
+| User select user and click on post | follower is shown in followers list       | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="images/manualtesting/userstory25-1.png" >
@@ -341,12 +341,12 @@
 
 26. As a site owner/developer I can delete a follow so that I can unfollow another user
 
-| **Step**                                                     | **Expected Result**                            | **Actual Result** |
-| ------------------------------------------------------------ | ---------------------------------------------- | ----------------- |
-| User log in                                                  | logged in status is shown in top right         | Work as expected  |
-| Add "/followers/id" in deployed url (id of user's followers) | followers detail page loads with delete button | Work as expected  |
-| User clicks on delete button                                 | a modal confirming delete occurs               | Work as expected  |
-| User clicks on delete button                                 | follower is deleted                            | Work as expected  |
+| **Step**                                                     | **Expected Result**                           | **Actual Result** |
+| ------------------------------------------------------------ | --------------------------------------------- | ----------------- |
+| User log in                                                  | logged in status is shown in top right        | Work as expected  |
+| Add "/followers/id" in deployed url (id of user's followers) | follower detail page loads with delete button | Work as expected  |
+| User clicks on delete button                                 | a modal confirming delete occurs              | Work as expected  |
+| User clicks on delete button                                 | follower is deleted                           | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="images/manualtesting/userstory26-1.png" >
