@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. [Manual Testing](#manual-testing-of-user-stories)
-2. [Automated Testing]()
+2. [Automated Testing](#automated-testing)
 3. [Bugs](#bugs)
 4. [Unfixed Bugs](#unfixed-bugs)
 
@@ -355,16 +355,26 @@
 
 </details>
 
-## Bugs
+### Automated Testing
 
-### CI Python Linter
+- Automated testing was done using the Django Rest Framework APITestCase
+
+<details><summary>Test Report</summary>
+<img src="images/docs/automated-testing.png">
+</details>
+
+### Bugs
+
+#### CI Python Linter
 
 - No bug was found during Python Validation
 
-### Heroku Deployment
+#### Heroku Deployment
 
 - No error found during deployment
 
-## Unfixed Bugs
+### Unfixed Bugs
 
 - No unfixed bugs from developer side
+
+##### Back to [top](#table-of-contents)

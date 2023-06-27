@@ -37,7 +37,7 @@ This repository contains the API set up using Django REST Framework for the Huma
 
 ## Project Structure
 
-The overall structure of the project was made with the help of Code Institute walthrough project [drf-api](https://github.com/Code-Institute-Solutions/drf-api) including models, views and serializers.
+The overall structure of the project was made with the help of Code Institute walkthrough project [drf-api](https://github.com/Code-Institute-Solutions/drf-api) including models, views and serializers.
 
 ### Code Structure
 
@@ -858,7 +858,7 @@ NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
 
 ### Code
 
-- The code was written with the help of Code Institute walthrough project [drf-api](https://github.com/Code-Institute-Solutions/drf-api)
+- The code was written with the help of Code Institute walkthrough project [drf-api](https://github.com/Code-Institute-Solutions/drf-api)
 
 ## Thank You
 
