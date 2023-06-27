@@ -132,3 +132,15 @@ This repository contains the API set up using Django REST Framework for the Huma
 |                  |
 | created_on       | created_on       | DateTimeField | auto_now_add=True                                                 |
 | updated_on       | updated_on       | DateTimeField | auto_now_add=True                                                 |
+
+#### Comments model
+
+- Comments model was created for user to comment on an event
+
+| Name       | Database Key | Field Type    | Validation                      |
+| ---------- | ------------ | ------------- | ------------------------------- |
+| user       | user         | ForeignKey    | User, on_delete=models.CASCADE  |
+| event      | event        | ForeignKey    | Event, on_delete=models.CASCADE |
+| created_on | created_on   | DateTimeField | auto_now_add=True               |
+| updated_on | updated_on   | DateTimeField | auto_now_add=True               |
+| content    | content      | TextField     | blank=False                     |
