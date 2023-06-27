@@ -144,3 +144,33 @@ This repository contains the API set up using Django REST Framework for the Huma
 | created_on | created_on   | DateTimeField | auto_now_add=True               |
 | updated_on | updated_on   | DateTimeField | auto_now_add=True               |
 | content    | content      | TextField     | blank=False                     |
+
+#### Interested model
+
+- Interested model was created for user to show interest for an event
+
+| Name       | Database Key | Field Type    | Validation                                                 |
+| ---------- | ------------ | ------------- | ---------------------------------------------------------- |
+| user       | user         | ForeignKey    | User, on_delete=models.CASCADE                             |
+| event      | event        | ForeignKey    | Event, related_name='interested', on_delete=models.CASCADE |
+| created_on | created_on   | DateTimeField | auto_now_add=True                                          |
+
+#### Join model
+
+- Join model was created for user to send join request for an event
+
+| Name       | Database Key | Field Type    | Validation                                           |
+| ---------- | ------------ | ------------- | ---------------------------------------------------- |
+| user       | user         | ForeignKey    | User, on_delete=models.CASCADE                       |
+| event      | event        | ForeignKey    | Event, related_name='join', on_delete=models.CASCADE |
+| created_on | created_on   | DateTimeField | auto_now_add=True                                    |
+
+#### Followers model
+
+- Join model was created for user to send join request for an event
+
+| Name       | Database Key | Field Type    | Validation                                                |
+| ---------- | ------------ | ------------- | --------------------------------------------------------- |
+| user       | user         | ForeignKey    | User, on_delete=models.CASCADE , related_name='following' |
+| followed   | followed     | ForeignKey    | User, on_delete=models.CASCADE ,related_name='followed'   |
+| created_on | created_on   | DateTimeField | auto_now_add=True                                         |
