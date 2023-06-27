@@ -9,14 +9,16 @@ This repository contains the API set up using Django REST Framework for the Huma
 ## Table of Contents
 
 - [Project Structure](#project-structure)
-  - [User Stories](#user-stories)
-    - [Profiles](#profiles)
-    - [Events](#events)
-    - [Comments](#comments)
-    - [Interested](#interested)
-    - [Join](#join)
-    - [Followers](#followers)
+  - [Code Structure](#code-structure)
+- [User Stories](#user-stories)
+  - [Profiles](#profiles)
+  - [Events](#events)
+  - [Comments](#comments)
+  - [Interested](#interested)
+  - [Join](#join)
+  - [Followers](#followers)
 - [Technologies Used](#technologies-used)
+- [Agile Design](#agile-design)
 - [Database Design](#database-design)
   - [Models](#models)
     - [User Model](#user-model)
@@ -31,6 +33,26 @@ This repository contains the API set up using Django REST Framework for the Huma
 ## Project Structure
 
 The overall structure of the project was made with the help of Code Institute walthrough project [drf-api](https://github.com/Code-Institute-Solutions/drf-api) including models, views and serializers.
+
+### Code Structure
+
+Project code structure is organized and divided into various application folders and constructed using Django Rest Framework
+
+#### Project Apps
+
+- **profile app**: This app contains model, views, serializers, tests and urls for profile
+- **events app**: This app contains model, views, serializers, tests and urls for events
+- **comments app**: This app contains model, views, serializers, tests and urls for comments
+- **interested app**: This app contains model, views, serializers, tests and urls for interested
+- **join app**: This app contains model, views, serializers, tests and urls for join
+- **followers app**: This app contains model, views, serializers, tests and urls for followers
+
+#### Other django apps
+
+- **settings.py**: This file contains configuration settings for your Django project, such as database settings, installed apps, and middleware.
+- **Procfile**: This file is used to specify the commands that should be executed when your Django app is deployed on a hosting platform.
+- **requirements.txt**: This file lists the dependencies required for the Django project to run.
+- **env.py**: This file is used to store environment variables for a Django project or application, such as database connection details or API keys.
 
 ## User Stories
 
@@ -104,6 +126,53 @@ The overall structure of the project was made with the help of Code Institute wa
 
 <details><summary>All libraries</summary>
 <img src="images/docs/requirements.png">
+</details>
+
+##### Back to [top](#table-of-contents)
+
+## Agile design
+
+### About
+
+- Agile development is the most effective way to development of any website
+- This was my second attempt in agile development but I feel I made a tremendous improvement
+- I was able to follow the steps and add milestones in this project
+
+### User Story Template
+
+- Using Github issues first I created the template for a user story that was later used to create user stories. I created four labels: must have, could have, should have.
+
+<details><summary>See User story template</summary>
+<img src="images/docs/userstorytemplate.png">
+</details>
+
+### Kanban Board
+
+- As a visual representation of the project's status, showing what tasks are to be done, in progress and completed.Each task is represented as a card on the board, and the cards can be moved from one column to another to show progress.
+
+[Link to project Kanban board.](https://github.com/users/Sinha5714/projects/6)
+
+<details><summary>See Kanban board</summary>
+<img src="images/docs/kanban.png">
+</details>
+
+### Moscow Prioritisation
+
+- The Moscow prioritization technique is used to prioritize project requirements based on their importance.
+
+<details><summary>See Image</summary>
+<img src="images/docs/moscow.png">
+</details>
+
+### Milestones
+
+- Milestones are created with a aim of finishing a task on a certain date. I have created 7 milestones for this project and linked them with issues related.
+
+<details><summary>See Image</summary>
+<img src="images/docs/milestones1.png">
+</details>
+<details><summary>See Image</summary>
+<img src="images/docs/milestone2.png">
 </details>
 
 ## Database Design
