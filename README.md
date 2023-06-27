@@ -82,6 +82,7 @@ The overall structure of the project was made with the help of Code Institute wa
 ### Languages & Frameworks
 
 - Python 3.10.2
+- Django
 - Django Rest Framework
 
 ### Libraries & Tools
@@ -91,6 +92,11 @@ The overall structure of the project was made with the help of Code Institute wa
 - [Lucidcharts](https://lucid.app/) has been used in project to design and document data model architecture.
 - [CodeAnyWhere](https://app.codeanywhere.com/) was IDE used for writing code and to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
+- [Heroku](https://heroku.com) - Cloud platform. Justification: I used this was used to deploy the project into live environment
+- [Django REST Framework](https://www.django-rest-framework.org/) - API toolkit. Justification: I used this to build the back-end API
+- [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/index.html) - API Module. Justification: I used this for user authentication
+- [Psycopg2](https://www.psycopg.org/docs/) - PostgreSQL database adaptor. Justification: This was used as a PostgreSQL database adapter for Python
+- [ElephantSQL](https://www.elephantsql.com/) - Database hosting service – Justification: This was used as the deployed project on Heroku uses an ElephantSQL database
 
 ### All libraries for deployment in Heroku
 
