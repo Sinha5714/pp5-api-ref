@@ -62,6 +62,73 @@
 
 </details>
 
+5. As a site owner/developer I can view a list of all events so that I can see all events at once
+
+| **Step**                             | **Expected Result**    | **Actual Result** |
+| ------------------------------------ | ---------------------- | ----------------- |
+| Add "/events" in deployed url        | events list page opens | Work as expected  |
+| User scrolls through the events list | events are displayed   | Work as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="images/manualtesting/userstory5.png" >
+
+</details>
+
+6. As a site owner/developer I can view a single event so that I can view the detail of event including comment counts, interested_count and join_request
+
+| **Step**                         | **Expected Result**      | **Actual Result** |
+| -------------------------------- | ------------------------ | ----------------- |
+| Add "/events/id" in deployed url | events detail page loads | Work as expected  |
+
+ <details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory6.png" >
+
+</details>
+
+7. As a site owner/developer I can create an event so that I can share what events are upcoming
+
+| **Step**                            | **Expected Result**                        | **Actual Result** |
+| ----------------------------------- | ------------------------------------------ | ----------------- |
+| User log in                         | logged in status is shown in top right     | Work as expected  |
+| Add "/events" in deployed url       | profile detail page loads with create form | Work as expected  |
+| User add the data and click on post | new event is shown in events list          | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory7-1.png" >
+<img src="images/manualtesting/userstory7-2.png" >
+
+</details>
+
+8. As a site owner/developer I can edit an event so that I can change the data with correct information
+
+| **Step**                                              | **Expected Result**                    | **Actual Result** |
+| ----------------------------------------------------- | -------------------------------------- | ----------------- |
+| User log in                                           | logged in status is shown in top right | Work as expected  |
+| Add "/events/id" in deployed url (id of user's event) | event detail page loads with edit form | Work as expected  |
+| User update the data and click on put                 | updated data is shown in events list   | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory8-1.png" >
+<img src="images/manualtesting/userstory8-2.png" >
+
+</details>
+
+9. As a site owner/developer I can delete event so that I can remove the event not valid or cancelled
+
+| **Step**                                              | **Expected Result**                        | **Actual Result** |
+| ----------------------------------------------------- | ------------------------------------------ | ----------------- |
+| User log in                                           | logged in status is shown in top right     | Work as expected  |
+| Add "/events/id" in deployed url (id of user's event) | event detail page loads with delete button | Work as expected  |
+| User clicks on delete button                          | a modal confirming delete occurs           | Work as expected  |
+| User clicks on delete button                          | event is deleted                           | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="images/manualtesting/userstory9-1.png" >
+<img src="images/manualtesting/userstory9-2.png" >
+<img src="images/manualtesting/userstory9-3.png" >
+
+</details>
+
 ## Bugs
 
 ### CI Python Linter
