@@ -16,6 +16,7 @@ This repository contains the API set up using Django REST Framework for the Huma
     - [Interested](#interested)
     - [Join](#join)
     - [Followers](#followers)
+- [Technologies Used](#technologies-used)
 - [Database Design](#database-design)
   - [Models](#models)
     - [User Model](#user-model)
@@ -75,6 +76,29 @@ The overall structure of the project was made with the help of Code Institute wa
 23. As a site owner/developer I can view a list of followers so that I can view who is following whom
 24. As a site owner/developer I can create follow so that I can follow another user
 25. As a site owner/developer I can delete a follow so that I can unfollow another user
+
+## Technologies Used
+
+### Languages & Frameworks
+
+- Python 3.10.2
+- Django Rest Framework
+
+### Libraries & Tools
+
+- [Cloudinary](https://cloudinary.com/) to store images for profile and events
+- [CI Python Linter](https://pep8ci.herokuapp.com/) was used for validation of python files.
+- [Lucidcharts](https://lucid.app/) has been used in project to design and document data model architecture.
+- [CodeAnyWhere](https://app.codeanywhere.com/) was IDE used for writing code and to push the code to GitHub
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+
+### All libraries for deployment in Heroku
+
+- All libraries is stored in requirements.txt for deployment in heroku
+
+<details><summary>All libraries</summary>
+<img src="images/docs/requirements.png">
+</details>
 
 ## Database Design
 
