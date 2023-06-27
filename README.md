@@ -30,6 +30,10 @@ This repository contains the API set up using Django REST Framework for the Huma
     - [Followers Model](#followers-model)
 - [Features](#features)
 - [Validation](#validation)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Thank You](#thank-you)
 
 ## Project Structure
 
@@ -682,3 +686,182 @@ Project code structure is organized and divided into various application folders
 <details><summary>Tests</summary>
 <img src="images/python-test/follower-test.png" >
 </details>
+
+## Testing
+
+- Testing of the website can be [seen here](https://github.com/Sinha5714/pp5-api-ref/blob/main/TESTING.md)
+
+## Deployment
+
+### Creating Database using ElephantSQL
+
+1. To generate a managed PostgreSQL database, please proceed to [ElephantSQL](https://customer.elephantsql.com/) and either sign up or sign in to your account. Once you've logged in, click on the 'Create New Instance' button.
+
+<details><summary>See Image</summary>
+
+![Create Instance](images/docs/create-instance.png)
+
+</details>
+
+2. Name your database and select the 'Tiny Turtle' payment plan. Then, click on 'Select Region'
+
+<details><summary>See Image</summary>
+
+![ElephantSQL Tiny-Turtle](images/docs/tiny-turtlr.png)
+
+</details>
+
+3. Select your preferred region and create the database instance.
+
+- After creating the instance, navigate to the instances page and click on the name of the database you selected earlier. Then, in the details section on the following page, copy the PostgreSQL URL.
+
+<details><summary>See Image</summary>
+
+![ElephantSQL](images/docs/postgreSQL-url.png)
+
+</details>
+
+### Deploying the website in Heroko
+
+- Before deploying in Heroku following files were created:
+  1. env.py : stores confidential data eg. API keys, passwords etc.
+
+<details><summary>See Image</summary>
+
+![env.py](images/docs/env-py.png)
+
+</details>
+
+2. Procfile : Very important for deployment and must be added with capital P
+
+<details><summary>See Image</summary>
+
+![Procfile](images/docs/procfile.png)
+
+</details>
+  
+  3. Requirements.txt: This must be updated for deployment in Heroku. It stores data of libraries used for project
+
+<details><summary>See Image</summary>
+
+![Requirements.txt](images/docs/requirements.png)
+
+</details>
+
+- The website was deployed to Heroko using following steps:
+
+#### Login or create an account at Heroku
+
+- Make an account in Heroko and login
+
+<details>
+    <summary>Heroko Login Page</summary>
+    <img src="images/docs/heroku_login.png" alt="Heroko login page">
+</details>
+
+#### Creating an app
+
+- Create new app in the top right of the screen and add an app name.
+- Select region
+- Then click "create app".
+
+<details>
+    <summary>Create App</summary>
+    <img src="images/docs/createapp.png" alt="Heroko create app screenshot">
+</details>
+
+#### Open settings Tab
+
+##### Click on config var
+
+- Store CLOUDINARY_URL file from in key and add the values
+- Store DATABASE_URL file from in key and add the values
+- Store SECRET_KEY file from in key and add the values
+- Store ALLOWED_HOST in key and add the value
+- Store DISABLE_COLLECTSTATIC in key and add the value
+
+NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
+
+<details>
+    <summary>Config var</summary>
+    <img src="images/docs/config-var.png" alt="Config var screenshot">
+</details>
+
+##### Add Buildpacks
+
+- Add python buildpack first
+- Add Nodejs buildpack after that
+
+<details>
+    <summary>Buildpacks</summary>
+    <img src="images/docs/buildpacks.png" alt="Buildpacks screenshot">
+</details>
+
+#### Open Deploy Tab
+
+##### Choose deployment method
+
+- Connect GITHUB
+- Login if prompted
+
+<details>
+    <summary>Deployment method</summary>
+    <img src="images/docs/method.png" alt="Deployment method screenshot">
+</details>
+
+##### Connect to Github
+
+- Choose repositories you want to connect
+- Click "Connect"
+
+<details>
+    <summary> Repo Connect</summary>
+    <img src="images/docs/repo-connect.png" alt="Repo connect screenshot">
+</details>
+
+##### Automatic and Manual deploy
+
+- Choose a method to deploy
+- After Deploy is clicked it will install various file
+
+<details>
+    <summary> Deploy methods</summary>
+    <img src="images/docs/deploy.png" alt="deploy method screenshot">
+</details>
+
+##### Deployment
+
+- Project was deployed in Heroku
+
+<details>
+    <summary>Deployed Website</summary>
+    <img src="images/pages/homepagedeployed.png" alt="deployed">
+</details>
+
+### Forking the GitHub Repository
+
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+4. [GitHub Repository](https://github.com/Sinha5714/pp5-api-ref)
+
+### Cloning the repository in GitHub
+
+1. Visit the GitHub page of the website's repository
+2. Click the “Clone” button on top of the page
+3. Click on “HTTPS”
+4. Click on the copy button next to the link to copy it
+5. Open your IDE
+6. Type `git clone <copied URL>` into the terminal
+
+## Credits
+
+### Code
+
+- The code was written with the help of Code Institute walthrough project [drf-api](https://github.com/Code-Institute-Solutions/drf-api)
+
+## Thank You
+
+- to my mentor Mo Shami for supporting me with his feedback through the entire project
+- special thanks to my husband Remo Liebetrau to help me in manual testing of the user stories
+- to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
