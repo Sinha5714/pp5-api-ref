@@ -21,11 +21,11 @@ class FollowerListViewTests(APITestCase):
         user3 = User.objects.create_user(username='user3', password='pass3')
 
         Follower.objects.create(
-            user=user1,
+            owner=user1,
             followed=user2
         )
         Follower.objects.create(
-            user=user1,
+            owner=user1,
             followed=user3
         )
 
@@ -41,7 +41,7 @@ class FollowerListViewTests(APITestCase):
         self.client.login(username='user2', password='pass2')
         response = self.client.post(
             '/followers/', {
-                'user': 2,
+                'owner': 2,
                 'followed': 3
             }
         )
@@ -52,7 +52,7 @@ class FollowerListViewTests(APITestCase):
         user2 = User.objects.get(username='user2')
         response = self.client.post(
             '/followers/', {
-                'user': user1,
+                'owner': user1,
                 'followed': user2
             }
         )
@@ -64,7 +64,7 @@ class FollowerListViewTests(APITestCase):
         """
         self.client.login(username='user1', password='pass1')
         response = self.client.post(
-            '/followers/', {'user': 1, 'followed': 3}
+            '/followers/', {'owner': 1, 'followed': 3}
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
@@ -80,11 +80,11 @@ class FollowerDetailViewTests(APITestCase):
         user3 = User.objects.create_user(username='user3', password='pass3')
 
         Follower.objects.create(
-            user=user1,
+            owner=user1,
             followed=user2
         )
         Follower.objects.create(
-            user=user1,
+            owner=user1,
             followed=user3
         )
 

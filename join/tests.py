@@ -75,7 +75,7 @@ class JoinDetailViewTests(APITestCase):
 
         Join.objects.create(
             owner=user1,
-            owner=event1,
+            event=event1,
         )
         Join.objects.create(
             owner=user2,

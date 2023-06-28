@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 class Follower(models.Model):
     """
     Follower class model.
-    'user' is a User that is following a User.
+    'owner' is a User that is following a User.
     'followed' is a User that is followed by 'user'.
     """
     owner = models.ForeignKey(

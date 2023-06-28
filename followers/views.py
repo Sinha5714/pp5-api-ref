@@ -19,7 +19,7 @@ class FollowerListView(generics.ListCreateAPIView):
     queryset = Follower.objects.all()
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        serializer.save(owner=self.request.user)
 
 
 class FollowerDetailView(generics.RetrieveDestroyAPIView):

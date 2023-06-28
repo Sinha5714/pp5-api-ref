@@ -51,15 +51,15 @@ class EventDetailViewTests(APITestCase):
         user3 = User.objects.create_user(username='user3', password='pass3')
 
         Event.objects.create(
-            user=user1,
+            owner=user1,
             title='user1 title',
         )
         Event.objects.create(
-            user=user2,
+            owner=user2,
             title='user2 title',
         )
         Event.objects.create(
-            user=user3,
+            owner=user3,
             title='user3 title',
         )
 

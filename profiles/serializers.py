@@ -13,7 +13,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     """
     Serializer for the Profile model
     """
-    user = serializers.ReadOnlyField(source='user.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     following_id = serializers.SerializerMethodField()
     events_count = serializers.ReadOnlyField()
@@ -23,7 +23,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     def get_is_owner(self, obj):
         request = self.context['request']
-        return request.user == obj.user
+        return request.user == obj.owner
 
     def get_following_id(self, obj):
         user = self.context['request'].user
