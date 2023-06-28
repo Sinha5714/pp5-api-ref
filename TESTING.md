@@ -365,6 +365,12 @@
 
 ### Bugs
 
+#### Code
+
+- Was unable to get following_id
+- Confusion was happening because 'user' is used in all models
+- Was able to change the user to user1 to request the user and was able to get the following_id
+
 #### CI Python Linter
 
 - No bug was found during Python Validation
