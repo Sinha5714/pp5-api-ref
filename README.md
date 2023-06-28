@@ -30,6 +30,7 @@ This repository contains the API set up using Django REST Framework for the Huma
     - [Followers Model](#followers-model)
 - [Features](#features)
 - [Validation](#validation)
+  - [Python](#python)
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
