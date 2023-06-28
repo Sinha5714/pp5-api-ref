@@ -19,7 +19,7 @@ class CommentsListViewTests(APITestCase):
     def setUp(self):
         user1 = User.objects.create_user(username='user1', password='pass1')
         event1 = Event.objects.create(
-            user=user1,
+            owner=user1,
             title='Test Event',
         )
 
@@ -27,7 +27,7 @@ class CommentsListViewTests(APITestCase):
         user1 = User.objects.get(username='user1')
         event1 = Event.objects.get(pk=1)
         Comment.objects.create(
-            user=user1,
+            owner=user1,
             event=event1,
             content='Test Comment'
         )
@@ -40,7 +40,7 @@ class CommentsListViewTests(APITestCase):
         user1 = User.objects.get(username='user1')
         response = self.client.post(
             '/comments/', {
-                'user': user1,
+                'owner': user1,
                 'event': 1,
                 'content': 'A Test Comment'
             }
@@ -69,21 +69,21 @@ class CommentDetailViewTests(APITestCase):
         user3 = User.objects.create_user(username='user3', password='pass3')
 
         event1 = Event.objects.create(
-            user=user1,
+            owner=user1,
             title='user1 title',
         )
         Comment.objects.create(
-            user=user1,
+            owner=user1,
             event=event1,
             content='User1 comment'
         )
         Comment.objects.create(
-            user=user2,
+            owner=user2,
             event=event1,
             content='User2 comment'
         )
         Comment.objects.create(
-            user=user3,
+            owner=user3,
             event=event1,
             content='User3 comment'
         )

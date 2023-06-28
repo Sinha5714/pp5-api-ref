@@ -19,10 +19,10 @@ class ProfileList(generics.ListAPIView):
     """
     serializer_class = ProfileSerializer
     queryset = Profile.objects.annotate(
-        events_count=Count('user__event', distinct=True),
-        followers_count=Count('user__followed', distinct=True),
-        following_count=Count('user__following', distinct=True),
-        join_request=Count('user__join', distinct=True),
+        events_count=Count('owner__event', distinct=True),
+        followers_count=Count('owner__followed', distinct=True),
+        following_count=Count('owner__following', distinct=True),
+        join_request=Count('owner__join', distinct=True),
     ).order_by('-created_on')
 
     filter_backends = [
@@ -30,16 +30,16 @@ class ProfileList(generics.ListAPIView):
         DjangoFilterBackend,
     ]
     filterset_fields = [
-        'user__following__followed__profile',
-        'user__followed__user__profile',
+        'owner__following__followed__profile',
+        'owner__followed__owner__profile',
     ]
     ordering_fields = [
         'events_count',
         'followers_count',
         'following_count',
         'join_request',
-        'user__following__created_on',
-        'user__followed__created_on',
+        'owner__following__created_on',
+        'owner__followed__created_on',
     ]
 
 
@@ -50,8 +50,8 @@ class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProfileSerializer
     permission_classes = [IsUserOrReadOnly]
     queryset = Profile.objects.annotate(
-        events_count=Count('user__event', distinct=True),
-        followers_count=Count('user__followed', distinct=True),
-        following_count=Count('user__following', distinct=True),
-        join_request=Count('user__join', distinct=True),
+        events_count=Count('owner__event', distinct=True),
+        followers_count=Count('owner__followed', distinct=True),
+        following_count=Count('owner__following', distinct=True),
+        join_request=Count('owner__join', distinct=True),
     ).order_by('-created_on')

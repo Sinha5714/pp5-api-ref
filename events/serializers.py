@@ -14,11 +14,11 @@ class EventSerializer(serializers.ModelSerializer):
     """
     Serializer for the Events model
     """
-    user = serializers.ReadOnlyField(source='user.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
-    profile_id = serializers.ReadOnlyField(source='user.profile.id')
+    profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(
-        source='user.profile.profile_pic.url'
+        source='owner.profile.profile_pic.url'
     )
     comments_count = serializers.ReadOnlyField()
     interested_count = serializers.ReadOnlyField()
@@ -28,7 +28,7 @@ class EventSerializer(serializers.ModelSerializer):
 
     def get_is_owner(self, obj):
         request = self.context['request']
-        return request.user == obj.user
+        return request.user == obj.owner
 
     def validate_image(self, value):
         if value.size > 1024 * 1024 * 2:
@@ -49,7 +49,7 @@ class EventSerializer(serializers.ModelSerializer):
         user = self.context['request'].user
         if user.is_authenticated:
             interested = Interested.objects.filter(
-                user=user, event=obj
+                owner=user, event=obj
             ).first()
             return interested.id if interested else None
         return None
@@ -58,7 +58,7 @@ class EventSerializer(serializers.ModelSerializer):
         user = self.context['request'].user
         if user.is_authenticated:
             join = Join.objects.filter(
-                user=user, event=obj
+                owner=user, event=obj
             ).first()
             return join.id if join else None
         return None
@@ -66,7 +66,7 @@ class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
         fields = [
-            'id', 'user', 'is_owner', 'created_on', 'updated_on', 'title',
+            'id', 'owner', 'is_owner', 'created_on', 'updated_on', 'title',
             'category', 'sub_category', 'event_start_date', 'event_end_date',
             'content', 'comments_count', 'interested_count', 'interested_id',
             'join_request', 'join_id', 'image', 'image_filter',

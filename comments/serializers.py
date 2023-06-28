@@ -13,9 +13,9 @@ class CommentSerializer(serializers.ModelSerializer):
     """
     Serializer for the Comment model
     """
-    user = serializers.ReadOnlyField(source='user.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
-    profile_id = serializers.ReadOnlyField(source='user.profile.id')
+    profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(
         source='user.profile.profile_pic.url'
     )
@@ -24,7 +24,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
     def get_is_owner(self, obj):
         request = self.context['request']
-        return request.user == obj.user
+        return request.user == obj.owner
 
     def get_created_on(self, obj):
         return naturaltime(obj.created_on)
@@ -35,7 +35,7 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = [
-            'id', 'user', 'created_on', 'updated_on', 'event',
+            'id', 'owner', 'created_on', 'updated_on', 'event',
             'content', 'is_owner', 'profile_id', 'profile_image',
         ]
 

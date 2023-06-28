@@ -13,7 +13,7 @@ class Comment(models.Model):
     """
     Comment model for adding comments on Events, related to Event
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -24,4 +24,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return 'comment on {} by {}'.format(self.event,
-                                            self.user.username)
+                                            self.owner.username)

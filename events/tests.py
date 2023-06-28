@@ -20,14 +20,14 @@ class EventListViewTests(APITestCase):
 
     def test_can_list_events(self):
         user1 = User.objects.get(username='user1')
-        Event.objects.create(user=user1, title='test title')
+        Event.objects.create(owner=user1, title='test title')
         response = self.client.get('/events/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_logged_in_user_can_create_event(self):
         self.client.login(username='user1', password='pass1')
         response = self.client.post(
-            '/events/', {'title': 'test title', 'country': 'Germany'}
+            '/events/', {'title': 'test title'}
         )
         count = Event.objects.count()
         self.assertEqual(count, 1)

@@ -13,12 +13,12 @@ class InterestedSerializer(serializers.ModelSerializer):
     """
     Serializer for the Interested model
     """
-    user = serializers.ReadOnlyField(source='user.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
         model = Interested
         fields = [
-            'id', 'user', 'created_on', 'event',
+            'id', 'owner', 'created_on', 'event',
         ]
 
     def create(self, validated_data):

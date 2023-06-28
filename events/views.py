@@ -30,15 +30,15 @@ class EventList(generics.ListCreateAPIView):
         DjangoFilterBackend,
     ]
     filterset_fields = {
-        'user__followed__user__profile': ['exact'],
-        'interested__user__profile': ['exact'],
-        'join__user__profile': ['exact'],
-        'user__profile': ['exact'],
+        'owner__followed__owner__profile': ['exact'],
+        'interested__owner__profile': ['exact'],
+        'join__owner__profile': ['exact'],
+        'owner__profile': ['exact'],
         'category': ['exact'],
         'event_start_date': ['lte'],
     }
     search_fields = [
-        'user__username',
+        'owner__username',
         'title',
         'event_start_date',
         'category',
@@ -53,7 +53,7 @@ class EventList(generics.ListCreateAPIView):
     ]
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        serializer.save(owner=self.request.user)
 
 
 class EventDetail(generics.RetrieveUpdateDestroyAPIView):

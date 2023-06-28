@@ -12,7 +12,7 @@ class Follower(models.Model):
     'user' is a User that is following a User.
     'followed' is a User that is followed by 'user'.
     """
-    user = models.ForeignKey(
+    owner = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='following'
     )
     followed = models.ForeignKey(
@@ -22,7 +22,7 @@ class Follower(models.Model):
 
     class Meta:
         ordering = ['-created_on']
-        unique_together = ['user', 'followed']
+        unique_together = ['owner', 'followed']
 
     def __str__(self):
-        return f'{self.user} {self.followed}'
+        return f'{self.owner} follows {self.followed}'

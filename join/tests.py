@@ -19,7 +19,7 @@ class JoinListViewTests(APITestCase):
     def setUp(self):
         user1 = User.objects.create_user(username='user1', password='pass1')
         event1 = Event.objects.create(
-            user=user1,
+            owner=user1,
             title='event',
         )
 
@@ -27,7 +27,7 @@ class JoinListViewTests(APITestCase):
         user1 = User.objects.get(username='user1')
         event1 = Event.objects.get(pk=1)
         Join.objects.create(
-            user=user1,
+            owner=user1,
             event=event1,
         )
         response = self.client.get('/join/')
@@ -39,7 +39,7 @@ class JoinListViewTests(APITestCase):
         user1 = User.objects.get(username='user1')
         response = self.client.post(
             '/join/', {
-                'user': user1,
+                'owner': user1,
                 'event': 1,
             }
         )
@@ -65,20 +65,20 @@ class JoinDetailViewTests(APITestCase):
         user2 = User.objects.create_user(username='user2', password='pass2')
 
         event1 = Event.objects.create(
-            user=user1,
+            owner=user1,
             title='User1 title',
         )
         event2 = Event.objects.create(
-            user=user2,
+            owner=user2,
             title='User2 title',
         )
 
         Join.objects.create(
-            user=user1,
-            event=event1,
+            owner=user1,
+            owner=event1,
         )
         Join.objects.create(
-            user=user2,
+            owner=user2,
             event=event2,
         )
 
@@ -105,6 +105,6 @@ class JoinDetailViewTests(APITestCase):
         user1 = User.objects.get(username='user1')
         event1 = Event.objects.get(pk=1)
         response = self.client.post(
-            '/join/', {'user': user1, 'event': event1}
+            '/join/', {'owner': user1, 'event': event1}
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)

@@ -13,7 +13,7 @@ class Interested(models.Model):
     """
     Class model for Interested, related to user and events
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     event = models.ForeignKey(
         Event, related_name='interested', on_delete=models.CASCADE
     )
@@ -21,7 +21,7 @@ class Interested(models.Model):
 
     class Meta:
         ordering = ['-created_on']
-        unique_together = ['user', 'event']
+        unique_together = ['owner', 'event']
 
     def __str__(self):
-        return f'{self.user} {self.event}'
+        return f'{self.owner} interested on {self.event}'

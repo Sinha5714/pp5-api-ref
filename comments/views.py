@@ -22,7 +22,7 @@ class CommentListView(generics.ListCreateAPIView):
     filterset_fields = ['event']
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        serializer.save(owner=self.request.user)
 
 
 class CommentDetailView(generics.RetrieveUpdateDestroyAPIView):

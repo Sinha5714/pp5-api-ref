@@ -8,7 +8,7 @@ from django.db.models.signals import post_save
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    owner = models.OneToOneField(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=255, blank=True)
@@ -25,12 +25,12 @@ class Profile(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return f"{self.user}'s profile"
+        return f"{self.owner}'s profile"
 
 
 def create_profile(sender, instance, created, **kwargs):
     if created:
-        Profile.objects.create(user=instance)
+        Profile.objects.create(owner=instance)
 
 
 post_save.connect(create_profile, sender=User)
