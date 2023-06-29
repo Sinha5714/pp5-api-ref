@@ -35,6 +35,7 @@ class EventList(generics.ListCreateAPIView):
         'join__owner__profile': ['exact'],
         'owner__profile': ['exact'],
         'category': ['exact'],
+        'sub_category': ['exact'],
         'event_start_date': ['lte'],
     }
     search_fields = [
@@ -42,6 +43,7 @@ class EventList(generics.ListCreateAPIView):
         'title',
         'event_start_date',
         'category',
+        'sub_category'
     ]
     ordering_fields = [
         'comments_count',
