@@ -215,7 +215,7 @@ Project code structure is organized and divided into various application folders
 
   - EVENT_CATEGORIES = (
     ("Discrimination", "Descrimination"),
-    ("LQBTQ", "LGBTQ"),
+    ("LGBTQ", "LGBTQ"),
     ("Equal-Rights", "Equal Rights"),
     ("Marraige-Rights", "Marraige Rights"),
     ("Work-Rights", "Work Rights"),
@@ -246,7 +246,7 @@ Project code structure is organized and divided into various application folders
 | title            | title            | CharField     | max-length=255                                                    |
 | content          | content          | TextField     | max-length=255                                                    |
 | image            | image            | ImageField    | upload_to='images/', default='../equal-rights_o1owqr', blank=True |
-| image_filter     | image_filter     | CharField     | max_length=32, choices=image_filter_choices, default='Normal'     |
+| image_filter     | image_filter     | CharField     | max_length=32, choices=image_filter_choices, default='normal'     |
 | event_start_date | event_start_date | DateTimeField | blank=True, null=True                                             |
 | event_end_date   | event_end_date   | DateTimeField | blank=True, null=True                                             |
 | category         | category         | CharField     | max_length=50, choices=EVENT_CATEGORIES, default='Equal-Rights'   |

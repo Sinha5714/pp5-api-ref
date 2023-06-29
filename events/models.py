@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 EVENT_CATEGORIES = (
     ("Discrimination", "Descrimination"),
-    ("LQBTQ", "LGBTQ"),
+    ("LGBTQ", "LGBTQ"),
     ("Equal-Rights", "Equal Rights"),
     ("Marraige-Rights", "Marraige Rights"),
     ("Work-Rights", "Work Rights"),
@@ -44,7 +44,7 @@ class Event(models.Model):
         upload_to='images/', default='../equal-rights_o1owqr', blank=True
     )
     image_filter = models.CharField(
-        max_length=32, choices=image_filter_choices, default='Normal'
+        max_length=32, choices=image_filter_choices, default='normal'
     )
     event_start_date = models.DateField(blank=True, null=True)
     event_end_date = models.DateField(blank=True, null=True)
