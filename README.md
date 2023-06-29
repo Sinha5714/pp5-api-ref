@@ -603,7 +603,7 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Urls</summary>
-<img src="images/python-test/comment-urls.png" >
+<img src="images/python-test/comment-url.png" >
 </details>
 
 <details><summary>Tests</summary>
@@ -633,7 +633,7 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Tests</summary>
-<img src="images/python-test/interested-test.png" >
+<img src="images/python-test/interested-tests.png" >
 </details>
 
 ##### Join App
@@ -659,33 +659,33 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Tests</summary>
-<img src="images/python-test/join-test.png" >
+<img src="images/python-test/join-tests.png" >
 </details>
 
 ##### Followers App
 
 <details><summary>Models</summary>
-<img src="images/python-test/follower-model.png" >
+<img src="images/python-test/followers-models.png" >
 </details>
 
 <details><summary>Views</summary>
-<img src="images/python-test/follower-views.png" >
+<img src="images/python-test/followers-views.png" >
 </details>
 
 <details><summary>Admin</summary>
-<img src="images/python-test/follower-admin.png" >
+<img src="images/python-test/followers-admin.png" >
 </details>
 
 <details><summary>Serializers</summary>
-<img src="images/python-test/follower-serializers.png" >
+<img src="images/python-test/followers-serializers.png" >
 </details>
 
 <details><summary>Urls</summary>
-<img src="images/python-test/follower-urls.png" >
+<img src="images/python-test/followers-urls.png" >
 </details>
 
 <details><summary>Tests</summary>
-<img src="images/python-test/follower-test.png" >
+<img src="images/python-test/followers-tests.png" >
 </details>
 
 ## Testing
