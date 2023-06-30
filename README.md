@@ -184,6 +184,16 @@ Project code structure is organized and divided into various application folders
 
 ## Database Design
 
+---
+
+<details><summary>(ERD)Physical database model</summary>
+<img src="images/docs/erd-diagram.png">
+</details>
+
+- This sample ERD diagram was made using [Lucid Charts](https://www.lucidchart.com)
+- For this Django app I have used PostgreSQL relational database management system.
+- model showed on the diagram visually represents the structure of a PostgreSQL database, including tables, columns, relationships, and constraints, that is stored in the database itself.
+
 ### Data Models
 
 #### User Model
