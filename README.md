@@ -145,6 +145,8 @@ Project code structure is organized and divided into various application folders
 - This was my second attempt in agile development but I feel I made a tremendous improvement
 - I was able to follow the steps and add milestones in this project
 
+Note: I have added Epic and updated all issues after recieving results on PP4 where I missed 'EPIC' in agile design.
+
 ### User Story Template
 
 - Using Github issues first I created the template for a user story that was later used to create user stories. I created four labels: must have, could have, should have.

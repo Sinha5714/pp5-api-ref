@@ -10,10 +10,10 @@ class Follower(models.Model):
     """
     Follower class model.
     'owner' is a User that is following a User.
-    'followed' is a User that is followed by 'user'.
+    'followed' is a User that is followed by 'owner'.
     """
     owner = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='following'
+        User, related_name='following', on_delete=models.CASCADE
     )
     followed = models.ForeignKey(
         User, related_name='followed', on_delete=models.CASCADE
