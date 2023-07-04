@@ -150,7 +150,7 @@ Project code structure is organized and divided into various application folders
 - Using Github issues first I created the template for a user story that was later used to create user stories. I created four labels: must have, could have, should have.
 
 <details><summary>See User story template</summary>
-<img src="images/docs/userstorytemplate.png">
+<img src="images/docs/usertemplate.png">
 </details>
 
 ### Kanban Board
@@ -160,7 +160,7 @@ Project code structure is organized and divided into various application folders
 [Link to project Kanban board.](https://github.com/users/Sinha5714/projects/6)
 
 <details><summary>See Kanban board</summary>
-<img src="images/docs/kanban.png">
+<img src="images/docs/kanban1.png">
 </details>
 
 ### Moscow Prioritisation
@@ -168,7 +168,7 @@ Project code structure is organized and divided into various application folders
 - The Moscow prioritization technique is used to prioritize project requirements based on their importance.
 
 <details><summary>See Image</summary>
-<img src="images/docs/moscow.png">
+<img src="images/docs/mosacowagile.png">
 </details>
 
 ### Milestones
@@ -790,8 +790,6 @@ Project code structure is organized and divided into various application folders
 - Store SECRET_KEY file from in key and add the values
 - Store ALLOWED_HOST in key and add the value
 - Store DISABLE_COLLECTSTATIC in key and add the value
-
-NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
 
 <details>
     <summary>Config var</summary>
