@@ -364,18 +364,20 @@
 </details>
 
 - Automated testing was also done using [Coverage python](https://coverage.readthedocs.io/)
+- Coverage report for project was done and overall result was 97%
 
 <details><summary>Test Report</summary>
 <img src="images/docs/coverage-testing.png">
+<img src="images/docs/coveragereport-1.png">
+<img src="images/docs/coveragereport2.png">
+<img src="images/docs/coveragereport3.png">
 </details>
 
 ### Bugs
 
 #### Code
 
-- Was unable to get following_id
-- Confusion was happening because 'user' is used in all models
-- Was able to change the user to user1 to request the user and was able to get the following_id
+- No error was found 
 
 #### CI Python Linter
 
