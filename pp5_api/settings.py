@@ -64,8 +64,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'localhost',
-                 '8000-sinha5714-pp5-api-ref-k3h1ifqb7e.us2.codeanyapp.com']
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'localhost']
 
 
 # Application definition
