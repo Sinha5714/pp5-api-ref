@@ -363,6 +363,12 @@
 <img src="images/docs/automated-testing.png">
 </details>
 
+- Automated testing was also done using [Coverage python](https://coverage.readthedocs.io/)
+
+<details><summary>Test Report</summary>
+<img src="images/docs/coverage-testing.png">
+</details>
+
 ### Bugs
 
 #### Code
